@@ -1,0 +1,103 @@
+Presentation WWX 2013
+=========
+
+Introduction Danny and Ruben
+
+Danish Handclapping
+
+We are passionate about making developing more fun and more productive.
+We believe it's possible to strongly reduce tedious and repeatable code.
+We have built a series of light-weight, well documented libraries for developing data-driven applications.
+
+Find out type of audience. Game-developers / application developers / mobile developers
+	Per group:
+		Game developers pay attention to: mvc and signals
+		Application developers: everything
+
+Our libraries are designed to be:
+	* cross platform (flash9 all, js some)
+	* avoid library lockin
+		functionality should be replacable by a different library
+	* fast
+		performed lot of benchmarking to find out the fastest procedures (depending on platform)
+
+Business Applications:
+	* lot of data
+	* data is changing often
+	* standard UI-components (form-elements, video, menus, buttons)
+
+Game interface:
+	* menus, screens, buttons
+	* HUD: changing data
+
+
+
+History
+	* 2010 frustrated with re-inventing the wheel during development
+	* used adobe flex quite long. Bloated framework.
+	* decided to generalize parts of code and release it as a framework
+
+Current status
+	* 4 active developers (part-time)
+	* 6 libraries released
+	* help needed with cross-platform development
+
+
+
+
+Libraries
+	* Signals
+		* light-weight event library (somewhat similar to as3-signals)
+
+	* Bindable data
+		* data-structures broadcasting events on changes (lists)
+		* data-structures which can update on events
+
+	* MVC
+		* light-weight MVC framework
+		* typed references to other MVC-actors
+		* each MVC-actor can provide a manifest with MVC-actors it needs
+			* MVC-actors can be reused in different projects
+
+	* Display
+		* extended functionality for Sprite/Shape/TextField/Bitmap
+			* display-signals and mouse/keyboard signals
+			* bindable child-list
+
+	* Layout
+		* basic layout-properties (size, position)
+		* position child-layouts with algorithms
+		* size can be specified in percentages
+		* does not rely on any UI-specific properties
+			-> can be used for svg, bitmaps, flash display-list, html-elements
+
+	* Components
+		* basic components: display + layout + graphics + behaviours + css-support
+		* available components:
+			* Button, ColorPicker, ComboBox, Panels, Form, List, TextArea, ProgressBar, Slider, ScrollBar, VideoPlayer, AudioPlayer
+	
+	* CSS
+		* no more using platform specific apis
+		* reuse style-definitions for multiple components
+		* parser which compiles css to haxe-code
+		* support for most css1, css2 and css3 properties
+		* allows nested selectors
+		* efficient algorithm to help components find all css that applies to the object
+
+Package overview
+	* core
+		* signals
+			* bindable
+				* data
+				* mvc
+				* fsm
+				* locale
+	* media
+	* display
+	* layout
+	* css
+	* components
+	* perceptor
+
+Design choices
+
