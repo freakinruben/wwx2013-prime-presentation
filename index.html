@@ -8,9 +8,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
 	<link rel="stylesheet" href="components/reveal.js/css/reveal.min.css">
 	<link rel="stylesheet" href="components/reveal.js/css/theme/default.css" id="theme">
 	<link rel="stylesheet" href="components/reveal.js/lib/css/zenburn.css">
+	
+	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/lib/codemirror.css"/>
+	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/lib/util/simple-hint.css"/>
+	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/rubyblue.css"/>
+	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/cobalt.css"/>
 <!--[if lt IE 9]>
 	<script src="components/reveal.js/lib/js/html5shiv.js"></script>
 <![endif]-->
@@ -18,7 +24,19 @@
 <body>
 <div class="reveal">
     <div class="slides">
-        <section>Single Horizontal Slide</section>
+        <section>
+<p>Single Horizontal Slide</p>
+<textarea name="hx-source" class="code haxe-source" rows="10">
+class Test {
+  static function main(){
+    #if js
+  	new js.JQuery("body").html("Haxe is great :)");
+    #elseif flash
+    trace("Haxe is great :)");
+    #end
+  }
+}</textarea>
+        </section>
         <section>
             <section><p>Vertical Slide 1</p><p>hallo</p></section>
             <section>Vertical Slide 2</section>
@@ -26,7 +44,7 @@
     </div>
 </div>
 <script type="text/javascript" src="components/reveal.js/js/reveal.min.js"></script>
-<script>
+<script>	
 Reveal.initialize({
 	controls: true,
 	progress: true,
@@ -37,5 +55,12 @@ Reveal.initialize({
 	transition: 'cube' // default/cube/page/concave/linear(2d)
 });
 </script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+<script src="components/jquery/jquery.min.js"></script>
+<script src="components/try-haxe/lib/CodeMirror2/lib/codemirror.js"></script>
+<script src="components/try-haxe/lib/CodeMirror2/mode/haxe/haxe.js"></script>
+<script src="components/try-haxe/lib/CodeMirror2/mode/javascript/javascript.js"></script>
+<script src="components/try-haxe/lib/haxe-hint.js"></script>
+<script src="components/try-haxe/app.js"></script>
 </body>
 </html>
