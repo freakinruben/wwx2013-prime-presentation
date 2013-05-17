@@ -1,0 +1,3 @@
+[submodule "components/try-haxe"]
+	path = components/try-haxe
+	url = git@github.com:clemos/try-haxe.git
