@@ -82,12 +82,12 @@
 .tab-content {
 	background: #272822;
 }
-.tab-pane { display: none; }
-.tab-pane.active { display: block; }
-.reveal .messages { font-size: 70%; }
-.reveal .js-canvas { padding: 1em .5em; }
-.reveal iframe { width: 100%; background: #fff; }
-.compiler-out { display: none; }
+.tab-pane                  { display: none; }
+.tab-pane.active           { display: block; }
+.reveal .messages          { font-size: 70%; }
+.reveal .js-canvas         { padding: 1em .5em 0; }
+.reveal iframe             { width: 100%; background: #fff; }
+.compiler-out              { display: none; }
 .reveal .CodeMirror-scroll { padding: .1em .4em; }
 .reveal .messages pre {
 	margin: 0;
@@ -102,5 +102,5 @@
 	top: -1.5em;
 	font-size: 125%;
 }
-.messages i.icon-check { color: #A6E22E; }
+.messages i.icon-check  { color: #A6E22E; }
 .messages i.icon-cancel { color: #F92672; }
