@@ -9,24 +9,44 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
+	<!-- <link rel="stylesheet" href="components/try-haxe/lib/bootstrap/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="components/reveal.js/css/reveal.min.css">
 	<link rel="stylesheet" href="components/reveal.js/css/theme/default.css" id="theme">
-	<link rel="stylesheet" href="components/reveal.js/lib/css/zenburn.css">
+	<!-- <link rel="stylesheet" href="components/reveal.js/lib/css/zenburn.css"> -->
 	
 	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/lib/codemirror.css"/>
 	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/lib/util/simple-hint.css"/>
-	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/rubyblue.css"/>
+	<!-- <link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/ambiance.css"/>
+	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/blackboard.css"/>
 	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/cobalt.css"/>
+	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/elegant.css"/>
+	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/erlang-dark.css"/>
+	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/lesser-dark.css"/> -->
+	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/monokai.css"/>
+	<!-- <link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/neat.css"/>
+	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/night.css"/>
+	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/rubyblue.css"/>
+	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/vibrant-ink.css"/>
+	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/xq-dark.css"/> -->
+	<link rel="stylesheet" href="css/icons.css">
+	<link rel="stylesheet" href="css/screen.css">
 <!--[if lt IE 9]>
 	<script src="components/reveal.js/lib/js/html5shiv.js"></script>
 <![endif]-->
-</head>`
-<body>
+</head>
+<body data-api="components/try-haxe/app">
 <div class="reveal">
     <div class="slides">
         <section>
-<p>Single Horizontal Slide</p>
-<textarea name="hx-source" class="code haxe-source" rows="10">
+<div class="demo">
+	<div class="control-group hx-targets">
+		<a href="#" class="compile-btn btn" data-loading-text="Compiling"><i class="icon-cog"></i> Run</a>
+		<div class="controls">
+			<input type="radio" name="target" value="js" id="js-radio" checked><label for="js-radio" class="radio inline">JS</label>
+			<input type="radio" name="target" value="swf" id="swf-radio"><label for="swf-radio" class="radio inline"> SWF</label>
+		</div>
+	</div>
+	<textarea name="hx-source" class="code haxe-source" rows="10">
 class Test {
   static function main(){
     #if js
@@ -36,6 +56,20 @@ class Test {
     #end
   }
 }</textarea>
+	<div class="compiler-out">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#js-output" data-toggle="tab">Output</a></li>
+			<li><a href="#js-source" data-toggle="tab">JS Source</a></li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane js-output active" id="js-output"><div class="thumbnail js-canvas"><iframe class="js-run" src="about:blank" name="js-run" frameborder="no" scrolling="no"></iframe></div></div>
+			<div class="tab-pane js-source" id="js-source"><textarea name="js-source" class="code js-source"></textarea>
+		</div>
+	</div>
+	<div class="messages"></div>
+
+</div>
+
         </section>
         <section>
             <section><p>Vertical Slide 1</p><p>hallo</p></section>
@@ -46,21 +80,24 @@ class Test {
 <script type="text/javascript" src="components/reveal.js/js/reveal.min.js"></script>
 <script>	
 Reveal.initialize({
+	width: "100%",
+	margin: 0,
 	controls: true,
 	progress: true,
 	history: true,
 	mouseWheel: false,
-	rollingLinks: true,
-	theme: 'night', // default/neon
+	rollingLinks: false,
+	theme: 'default', // default/neon
 	transition: 'cube' // default/cube/page/concave/linear(2d)
 });
 </script>
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
-<script src="components/jquery/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!-- <script src="components/jquery/jquery.min.js"></script> -->
 <script src="components/try-haxe/lib/CodeMirror2/lib/codemirror.js"></script>
 <script src="components/try-haxe/lib/CodeMirror2/mode/haxe/haxe.js"></script>
 <script src="components/try-haxe/lib/CodeMirror2/mode/javascript/javascript.js"></script>
 <script src="components/try-haxe/lib/haxe-hint.js"></script>
 <script src="components/try-haxe/app.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>
