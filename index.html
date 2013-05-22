@@ -37,16 +37,8 @@
 <body data-api="components/try-haxe/app">
 <div class="reveal">
     <div class="slides">
-        <section>
-<div class="demo">
-	<div class="control-group hx-targets">
-		<a href="#" class="compile-btn btn" data-loading-text="Compiling"><i class="icon-cog"></i> Run</a>
-		<div class="controls">
-			<input type="radio" name="target" value="js" id="js-radio" checked><label for="js-radio" class="radio inline">JS</label>
-			<input type="radio" name="target" value="swf" id="swf-radio"><label for="swf-radio" class="radio inline"> SWF</label>
-		</div>
-	</div>
-	<textarea name="hx-source" class="code haxe-source" rows="10">
+        <section id="slide1">
+	<textarea name="hx-source" class="code haxe-source" rows="10" id="example1">
 class Test {
   static function main(){
     #if js
@@ -56,24 +48,28 @@ class Test {
     #end
   }
 }</textarea>
-	<div class="compiler-out">
-		<ul class="nav nav-tabs">
-			<li class="active"><a href="#js-output" data-toggle="tab">Output</a></li>
-			<li><a href="#js-source" data-toggle="tab">JS Source</a></li>
-		</ul>
-		<div class="tab-content">
-			<div class="tab-pane js-output active" id="js-output"><div class="thumbnail js-canvas"><iframe class="js-run" src="about:blank" name="js-run" frameborder="no" scrolling="no"></iframe></div></div>
-			<div class="tab-pane js-source" id="js-source"><textarea name="js-source" class="code js-source"></textarea>
-		</div>
-	</div>
-	<div class="messages"></div>
-
-</div>
-
         </section>
         <section>
-            <section><p>Vertical Slide 1</p><p>hallo</p></section>
-            <section>Vertical Slide 2</section>
+            <section id="slide2a"><p>Vertical Slide 1</p><p>hallo</p><textarea name="hx-source" class="code haxe-source" rows="10" id="example2">
+class Test {
+  static function main(){
+    trace("Haxe is great :)");
+  }
+}</textarea></section>
+            <section id="slide2b">Vertical Slide 2</section>
+        </section>
+
+        <section id="slide3">
+	<textarea name="hx-source" class="code haxe-source" rows="10" id="example3">
+class Test {
+  static function main(){
+    #if js
+  	new js.JQuery("body").html("Haxe is great :)");
+    #elseif flash
+    trace("Haxe is great :)");
+    #end
+  }
+}</textarea>
         </section>
     </div>
 </div>
