@@ -12,7 +12,7 @@
 	<!-- <link rel="stylesheet" href="components/try-haxe/lib/bootstrap/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="components/reveal.js/css/reveal.min.css">
 	<link rel="stylesheet" href="components/reveal.js/css/theme/default.css" id="theme">
-	<!-- <link rel="stylesheet" href="components/reveal.js/lib/css/zenburn.css"> -->
+	<link rel="stylesheet" href="components/reveal.js/lib/css/zenburn.css">
 	
 	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/lib/codemirror.css"/>
 	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/lib/util/simple-hint.css"/>
@@ -178,13 +178,13 @@ Our libraries are designed to be:
 
 <section id="prime-overview">
 	<ul>
-		<li class="fragment" id="overview-core"><i class="icon-flow-tree"></i><span>core</span></li>
-		<li class="fragment" id="overview-signals"><i class="icon-signal"></i><span>Signals</span></li>
-		<li class="fragment" id="overview-mvc"><i class="icon-share"></i><span>MVC</span></li>
-		<li class="fragment" id="overview-display"><i class="icon-window"></i><span>Display</span></li>
-		<li class="fragment" id="overview-layout"><i class="icon-columns"></i><span>Layout</span></li>
-		<li class="fragment" id="overview-components"><i class="icon-calendar"></i><span>Components</span></li>
-		<li class="fragment" id="overview-css"><i class="icon-palette"></i><span>CSS</span></li>
+		<li class="fragment" id="overview-core"><i class="icon-prime-core"></i><span>core</span></li>
+		<li class="fragment" id="overview-signals"><i class="icon-prime-signals"></i><span>Signals</span></li>
+		<li class="fragment" id="overview-mvc"><i class="icon-prime-mvc"></i><span>MVC</span></li>
+		<li class="fragment" id="overview-display"><i class="icon-prime-display"></i><span>Display</span></li>
+		<li class="fragment" id="overview-layout"><i class="icon-prime-layout"></i><span>Layout</span></li>
+		<li class="fragment" id="overview-components"><i class="icon-prime-components"></i><span>Components</span></li>
+		<li class="fragment" id="overview-css"><i class="icon-prime-css"></i><span>CSS</span></li>
 	</ul>
 </section>
 
@@ -193,9 +193,48 @@ Our libraries are designed to be:
 <section id="signals">
 	<section id="signals-intro">
 		<h1>Signals</h1>
+		<ul>
+			<li>Strongly-typed event-system</li>
+			<li>Intuïtive syntax-sugar</li>	
+			<li>Cross-platform</li>	
+		</ul>
 	</section>
 
-	<section id="signals-example1"><textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example1-code">
+	<section id="events">
+		<h2>What's wrong with events?</h2>
+		<ul>
+			<li>no typechecking</li>
+			<li>messages wrapped in Event-class</li>
+			<li>no generic functions as listeners</li>
+		</ul>
+	</section>
+
+	<section id="signal-basics">
+		<pre><code>var signal : Signal2&lt;Int, String&gt;                   // signal definition
+
+function actOnSignal (p1:Int, p2:String) : Void;    // handler definition
+
+signal.bind( this, actOnSignal );                   // binding them together</code></pre>
+	</section>
+
+	<section id="signals-example1">
+		<h2>Binding, observing</h2>
+		<textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example1-code">
+import prime.signals.Signal2;
+
+class Test {
+	static function main() new Test()
+	function new () {
+		var s = new Signal2<Int,String>();
+		s.bind(this, function (a:Int,b:String) { trace("a: "+a+"; b: "+b); });
+		s.observe(this, function () { trace("test"); });
+		s.send(5, "test");
+	}
+}</textarea></section>
+
+	<section id="signals-example2">
+		<h2>Syntax sugar</h2>
+		<textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example2-code">
 import prime.signals.Signal1;
  using prime.utils.Bind;
 class Test {
@@ -216,6 +255,47 @@ class Test {
 
 
 <section id="mvc">
+	<section id="mvc-intro">
+		<h1>MVC</h1>
+		<ul>
+			<li>reusable actors</li>
+			<li>typed MVC-references</li>
+			<li>reduced boilerplate (macro's)</li>
+		</ul>
+
+		<ul class="dependencies">
+			<li><i class="icon-prime-core"></i></li>
+			<li><i class="icon-prime-signals"></i></li>
+			<li><i class="icon-prime-states"></i></li>
+		</ul>
+	</section>
+
+
+	<section id="mvc-overview">
+		<img src="img/mvc-facade.svg" id="svg-mvc-facade">
+		<img src="img/mvc-logic.svg" class="fragment" id="svg-mvc-logic">
+		<img src="img/mvc-model.svg" class="fragment" id="svg-mvc-model">
+		<img src="img/mvc-states.svg" class="fragment" id="svg-mvc-states">
+		<img src="img/mvc-events.svg" class="fragment" id="svg-mvc-events">
+		<img src="img/mvc-view.svg" class="fragment" id="svg-mvc-view">
+	</section>
+
+
+	<section id="mvc-typed-references">
+		<h2>Typed MVC-references</h2>
+		<pre><code>private typedef Facade {
+	var model = {
+		var clipboard   (default, null) : ClipboardProxy;
+		var document    (default, null) : DocumentProxy;
+		var selection   (default, null) : SelectionProxy;
+	};
+	var events = {
+		var clipboard   (default, null) : ClipboardEvents;
+	};
+};
+class SelectionController extends MVCActor&lt;Facade&gt; {}</code></pre>
+	</section>
+		
 </section>
 
 
@@ -237,7 +317,8 @@ class Test extends Sprite {
 		addUglyChild.on( userEvents.mouse.click,    this );
 	}
 
-	function changeColor (state) funkify(Std.int( 0xF1F100 * state.local.x ))
+	function changeColor (state:MouseState)
+		funkify(Std.int( 0xF1F100 * state.local.x ))
 
 	function addUglyChild () {
 		var it = new Test();

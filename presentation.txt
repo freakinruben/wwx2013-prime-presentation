@@ -104,8 +104,8 @@ Package overview
 Design choices
 
 Todo
-- signals uitleg
-- mvc uitleg
++ signals uitleg
++ mvc uitleg
 - display uitleg
 - layout uitleg
 - components uitleg

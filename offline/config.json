@@ -64,8 +64,14 @@
       "src": "entypo"
     },
     {
+      "uid": "e4536ab890a215f2fe8952de5c2fe354",
+      "css": "prime-core",
+      "code": 59422,
+      "src": "entypo"
+    },
+    {
       "uid": "744a71fe4b5ab7c4f4b7cd598e9bf75a",
-      "css": "window",
+      "css": "prime-display",
       "code": 59398,
       "src": "entypo"
     },
@@ -77,7 +83,7 @@
     },
     {
       "uid": "80451d627470ea7f977a263fdb771d7b",
-      "css": "palette",
+      "css": "prime-css",
       "code": 59404,
       "src": "entypo"
     },
@@ -88,8 +94,14 @@
       "src": "entypo"
     },
     {
-      "uid": "8a1d446e5555e76f82ddb1c8b526f579",
-      "css": "flow-tree",
+      "uid": "b95cfc96d48a72dd665e0ab109880b5e",
+      "css": "clipboard",
+      "code": 59421,
+      "src": "entypo"
+    },
+    {
+      "uid": "4bcb3aaa98736be3027bef7c76c55021",
+      "css": "prime-states",
       "code": 59393,
       "src": "entypo"
     },
@@ -101,7 +113,7 @@
     },
     {
       "uid": "531bc468eecbb8867d822f1c11f1e039",
-      "css": "calendar",
+      "css": "prime-components",
       "code": 59405,
       "src": "fontawesome"
     },
@@ -113,7 +125,7 @@
     },
     {
       "uid": "53dd31a6cc6438192b2d7b09b1c1dd45",
-      "css": "columns",
+      "css": "prime-layout",
       "code": 59394,
       "src": "fontawesome"
     },
@@ -143,7 +155,7 @@
     },
     {
       "uid": "e6t4yvmv401e9gpo2anslq4uqy2iz692",
-      "css": "signal",
+      "css": "prime-signals",
       "code": 59396,
       "src": "modernpics"
     },
