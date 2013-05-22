@@ -4,6 +4,24 @@
   "css_use_suffix": false,
   "glyphs": [
     {
+      "uid": "cbc328d1c779a2b9e3b1199d904199a5",
+      "css": "emo-grin",
+      "code": 59417,
+      "src": "fontelico"
+    },
+    {
+      "uid": "4843d0d6050dd508d4c101a334f46db2",
+      "css": "emo-shoot",
+      "code": 59416,
+      "src": "fontelico"
+    },
+    {
+      "uid": "0eabe5f8d71cc838484ff39436426d2d",
+      "css": "heart-1",
+      "code": 59411,
+      "src": "entypo"
+    },
+    {
       "uid": "3def559c3c39b8500882e02892b7daa8",
       "css": "picture",
       "code": 59392,
@@ -22,15 +40,51 @@
       "src": "entypo"
     },
     {
+      "uid": "3a230e539a4f3b904debd04c6c155034",
+      "css": "help",
+      "code": 59419,
+      "src": "entypo"
+    },
+    {
+      "uid": "7ad4d2306ebda8452e5e3eff3cd8241c",
+      "css": "thumbs-up-1",
+      "code": 59410,
+      "src": "entypo"
+    },
+    {
+      "uid": "540b6a4262be769515c79700618b4aea",
+      "css": "address",
+      "code": 59408,
+      "src": "entypo"
+    },
+    {
+      "uid": "922ab2cb66943a83de969990289ef1dc",
+      "css": "docs",
+      "code": 59418,
+      "src": "entypo"
+    },
+    {
       "uid": "744a71fe4b5ab7c4f4b7cd598e9bf75a",
       "css": "window",
       "code": 59398,
       "src": "entypo"
     },
     {
+      "uid": "3bd18d47a12b8709e9f4fe9ead4f7518",
+      "css": "arrows-ccw",
+      "code": 59409,
+      "src": "entypo"
+    },
+    {
       "uid": "80451d627470ea7f977a263fdb771d7b",
       "css": "palette",
       "code": 59404,
+      "src": "entypo"
+    },
+    {
+      "uid": "ef74ff62feda486fd414410e782b598a",
+      "css": "study",
+      "code": 59415,
       "src": "entypo"
     },
     {
@@ -70,6 +124,12 @@
       "src": "fontawesome"
     },
     {
+      "uid": "0bda4bc779d4c32623dec2e43bd67ee8",
+      "css": "gauge",
+      "code": 59414,
+      "src": "fontawesome"
+    },
+    {
       "uid": "afdef1656447e2558662b393d6b4bb75",
       "css": "share",
       "code": 59402,
@@ -92,6 +152,18 @@
       "css": "grid",
       "code": 59397,
       "src": "modernpics"
+    },
+    {
+      "uid": "653750436fc99eeb29ccd487e6a5bfa6",
+      "css": "school",
+      "code": 59412,
+      "src": "maki"
+    },
+    {
+      "uid": "878dccd7b810bc231a132d86a3028afe",
+      "css": "tree-1",
+      "code": 59413,
+      "src": "maki"
     },
     {
       "uid": "7560ca08e3d83e43c58fcbf8f16d8f03",

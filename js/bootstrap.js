@@ -133,3 +133,22 @@
   })
 
 }(window.jQuery);
+
+
+Reveal.initialize({
+  width: "100%",
+  height: "100%",
+  margin: 0,
+  controls: true,
+  progress: true,
+  history: true,
+  mouseWheel: false,
+  rollingLinks: false,
+  theme: 'default', // default/neon
+  transition: 'cube', // default/cube/page/concave/linear(2d)
+  dependencies: [
+    { src: 'components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+    //{ src: 'components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});

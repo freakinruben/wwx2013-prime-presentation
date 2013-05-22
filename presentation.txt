@@ -84,6 +84,8 @@ Libraries
 		* allows nested selectors
 		* efficient algorithm to help components find all css that applies to the object
 
+
+
 Package overview
 	* core
 		* signals
@@ -100,4 +102,17 @@ Package overview
 	* perceptor
 
 Design choices
+
+Todo
+- signals uitleg
+- mvc uitleg
+- display uitleg
+- layout uitleg
+- components uitleg
+- css uitleg
+- opmaak introductie-iconen-tijdslijn
+- opmaak overview prime
+- opmaak lijsten
+- what is needed overzicht
+
 

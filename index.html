@@ -36,59 +36,244 @@
 </head>
 <body data-api="components/try-haxe/app">
 <div class="reveal">
-    <div class="slides">
-        <section id="slide1">
-	<textarea name="hx-source" class="code haxe-source" rows="10" id="example1">
-class Test {
-  static function main(){
-    #if js
-  	new js.JQuery("body").html("Haxe is great :)");
-    #elseif flash
-    trace("Haxe is great :)");
-    #end
-  }
-}</textarea>
-        </section>
-        <section>
-            <section id="slide2a"><p>Vertical Slide 1</p><p>hallo</p><textarea name="hx-source" class="code haxe-source" rows="10" id="example2">
-class Test {
-  static function main(){
-    trace("Haxe is great :)");
-  }
-}</textarea></section>
-            <section id="slide2b">Vertical Slide 2</section>
-        </section>
+<div class="slides">
+<section id="title">
+	<img src="img/face.png" id="prime-face" />
+	<img src="img/primevc.png" id="primevc" />
+	<p class="date">WWX 2013</p><p>May 26 2013</p>
+</section>
 
-        <section id="slide3">
-	<textarea name="hx-source" class="code haxe-source" rows="10" id="example3">
+
+
+
+<section id="handclapping">
+	<aside class="notes">
+Like to do a small extercise. Stand up:
+	* knee clapp - hands up
+	* knee clapp - hands left
+	* knee clapp - hands right
+
+Very good. Rotate towards a neighbour and do a knee clapp and choose a random direction
+Same direction as your partner, you do knee clapp and high five
+	</aside>
+</section>
+
+
+
+<section id="overview">
+<h2>Overview</h2>
+<ul>
+	<li>Libraries for building data-driven user-interfaces</li>
+	<li>Libraries are designed to be muli-purpose</li>
+	<li>Who's interested in helping us?</li>
+</ul>
+</section>
+
+
+
+<section id="audience-questions">
+<ul>
+	<li>How many game-developers?</li>
+	<li>Who builds application?</li>
+	<li>Who is frustrated with building standard UI-components?</li>
+</ul>
+	<aside class="notes">
+	</aside>
+</section>
+
+
+
+<section id="about-us">
+	<ol class="timeline begin">
+		<li>Danny Wilson &amp; Ruben Weijers</li>
+		<li><h3><i class="icon-mill"></i></h3>        <span class="note">from Netherlands</span></li>
+		<li><h3><i class="icon-citeflow"></i></h3>    <span class="note">co-founder of CiteFlow, we give organisations insight in what knowledge their employees have.</span></li>
+		<li><h3><i class="icon-school"></i></h3>      <span class="note">programming at age 12</span></li>
+		<li><h3><i class="icon-tree-1"></i></h3>      <span class="note">met Danny at some camp</span></li>
+		<li><h3><i class="icon-emo-shoot"></i></h3>   <span class="note">Danny started dating my sister</span></li>
+		<li><h3><i class="icon-emo-grin"></i></h3>    <span class="note">only for a short time</span></li>
+		<li><h3><i class="icon-study"></i></h3>       <span class="note">same study, graphic media technology</span></li>
+		<li><h3><i class="icon-gauge"></i></h3>       <span class="note">Found out we both like to go the extra mile.</span></li>
+		<li><h3><i class="icon-heart-1"></i></h3>     <span class="note">we share a passion to make developing more fun and more productive</span></li>
+		<li><h3><i class="icon-docs"></i></h3>        <span class="note">We've been sharing ways to improve our productivity, new IDE's, programming languages and other life-hacking techniques</span></li>
+		<li><h3><i class="icon-help"></i></h3>        <span class="note">In 2009 quited my job at Nestor (2009)</span></li>
+		<li><h3><i class="icon-flex"></i></h3>        <span class="note">building e-learning applications in Adobe Flex.</span></li>
+		<li><h3><i class="icon-cross"></i></h3>       <span class="note">pretty frustrated with Flex. Heavy, intertangled components</span></li>
+		<li><h3><i class="icon-address"></i></h3>     <span class="note">started doing freelance jobs</span></li>
+		<li><h3><i class="icon-haxe"></i></h3>        <span class="note">Danny introduced me to Haxe</span></li>
+		<li><h3><i class="icon-onlinetouch"></i></h3> <span class="note">hired by OnlineTouch to build an editor for creating interactive magazines online</span></li>
+		<li><h3><i class="icon-arrows-ccw"></i></h3>  <span class="note">Danny had build an flash-application to view publications in Haxe</span></li>
+		<li><h3><i class="icon-prime"></i></h3>       <span class="note">Lot's of code an ideas from this application was reusable and abstracted. This formed the base for prime.vc (2010)</span></li>
+	</ol>
+	<aside class="notes">
+Ruben:
+	[mills]    * from the Netherlands
+	[logo]     * co-founder of CiteFlow, we give organisations insight in what knowledge their employees have.
+	[baby]     * Programming at age 12 (1999)
+	[danny]    * also the age that I've met Danny at some camp
+	[heart]    * Danny dating my sister
+	[smiley]   * only for a short a time
+	[studying] * Same study, graphic media technology (2004)
+	[speed]    * Found out we both like to go the extra mile.
+[behind heart] * we share a passion to make developing more fun and more productive
+	[notes]    * We've been sharing ways to improve our productivity, new IDE's, programming languages and other life-hacking techniques
+	[]         * In 2009 quited my job at Nestor (2009)
+	[flex]     * building e-learning applications in Adobe Flex.
+	[cross]    * pretty frustrated with Flex. Heavy, intertangled components
+	[roadsign] * started doing freelance jobs
+	[logo]     * Danny introduced me to Haxe
+	[logo]     * hired by OnlineTouch to build an editor for creating interactive magazines online
+	[recyling] * Danny had build an flash-application to view publications in Haxe
+	[logo]     * Lot's of code an ideas from this application was reusable and abstracted. This formed the base for prime.vc (2010)
+	</aside>
+</section>
+
+
+
+<section id="demos">
+	<section id="demo-intro">
+		<h2>Demos</h2>
+	</section>
+	<section id="layout-demo"><textarea name="hx-source" class="code haxe-source" rows="10" id="layout-demo1">
+class Test extends prime.gui.core.UIWindow
+{
+	public static function main ()
+		prime.gui.display.Window.startup(function (stage) { return new Test(stage); })
+
+
+	override private function createChildren () {
+		for (i in 0...20)	attach( new prime.gui.core.UIGraphic() );
+		for (i in 0...20)	attach( new prime.gui.core.UIComponent() );
+		for (i in 0...20)	attach( new prime.gui.core.UIGraphic() );
+	}
+}
+</textarea></section>
+</section>
+
+
+
+<section id="about-prime">
+	<h2>Goals</h2>
+	<ul>
+		<li>cross platform</li>
+		<li>data-intensive applications</li>
+		<li>strongly typed</li>
+		<li>fast</li>
+	</ul>
+	<aside class="notes">
+We believe it's possible to strongly reduce tedious and repeatable code.
+
+Prime.vc:
+A series of light-weight, well documented libraries for developing data-driven applications.
+Our libraries are designed to be:
+	* cross platform (flash9 all, js some)
+	* avoid library lockin
+		functionality should be replacable by a different library
+	* fast
+		performed lot of benchmarking to find out the fastest procedures (depending on platform)
+	</aside>
+</section>
+
+
+
+<section id="prime-overview">
+	<ul>
+		<li class="fragment" id="overview-core"><i class="icon-flow-tree"></i><span>core</span></li>
+		<li class="fragment" id="overview-signals"><i class="icon-signal"></i><span>Signals</span></li>
+		<li class="fragment" id="overview-mvc"><i class="icon-share"></i><span>MVC</span></li>
+		<li class="fragment" id="overview-display"><i class="icon-window"></i><span>Display</span></li>
+		<li class="fragment" id="overview-layout"><i class="icon-columns"></i><span>Layout</span></li>
+		<li class="fragment" id="overview-components"><i class="icon-calendar"></i><span>Components</span></li>
+		<li class="fragment" id="overview-css"><i class="icon-palette"></i><span>CSS</span></li>
+	</ul>
+</section>
+
+
+
+<section id="signals">
+	<section id="signals-intro">
+		<h1>Signals</h1>
+	</section>
+
+	<section id="signals-example1"><textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example1-code">
+import prime.signals.Signal1;
+ using prime.utils.Bind;
 class Test {
-  static function main(){
-    #if js
-  	new js.JQuery("body").html("Haxe is great :)");
-    #elseif flash
-    trace("Haxe is great :)");
-    #end
-  }
-}</textarea>
-        </section>
-    </div>
-</div>
-<script type="text/javascript" src="components/reveal.js/js/reveal.min.js"></script>
-<script>	
-Reveal.initialize({
-	width: "100%",
-	margin: 0,
-	controls: true,
-	progress: true,
-	history: true,
-	mouseWheel: false,
-	rollingLinks: false,
-	theme: 'default', // default/neon
-	transition: 'cube' // default/cube/page/concave/linear(2d)
-});
-</script>
+	static function main() new Test()
+	function new () {
+		var s = new Signal1<String>();
+		function () { trace("test"); }.on(s,this);
+		function () { trace("test once"); }.onceOn(s,this);
+		function (p){ trace(p); }.on(s,this);
+		function (p){ trace(p+" once"); }.onceOn(s,this);
+		s.send("argument1");
+		s.send("argument2");
+	}
+}</textarea></section>
+
+</section>
+
+
+
+<section id="mvc">
+</section>
+
+
+
+<section id="display">
+	<section id="display-example1"><textarea name="hx-source" class="code haxe-source" rows="10" id="display-example1-code">
+import prime.gui.display.Sprite;
+import prime.gui.events.MouseEvents;
+ using prime.utils.Bind;
+ using prime.utils.TypeUtil;
+
+class Test extends Sprite {
+	static function main() flash.Lib.current.addChild(new Test())
+
+	public function new () {
+		super();
+		funkify(prime.utils.Color.random());
+		changeColor .on( userEvents.mouse.rollOver, this );
+		addUglyChild.on( userEvents.mouse.click,    this );
+	}
+
+	function changeColor (state) funkify(Std.int( 0xF1F100 * state.local.x ))
+
+	function addUglyChild () {
+		var it = new Test();
+		it.x   = parent.is(Sprite) ? parent.as(Sprite).children.indexOf(this) * 20 : 20;
+		it.y   = parent.y + 50;
+		it.attachDisplayTo(this);
+	}
+
+	function funkify (color) {
+		graphics.clear();
+		graphics.beginFill(color);
+		graphics.drawRect(0,0,100,100);
+	}
+}</textarea></section>
+</section>
+
+
+
+<section id="layout">
+</section>
+
+
+
+<section id="components">
+</section>
+
+
+
+<section id="css">
+</section>
+
+
+</div></div>
+<script src="components/reveal.js/lib/js/head.min.js"></script>
+<script src="components/reveal.js/js/reveal.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<!-- <script src="components/jquery/jquery.min.js"></script> -->
 <script src="components/try-haxe/lib/CodeMirror2/lib/codemirror.js"></script>
 <script src="components/try-haxe/lib/CodeMirror2/mode/haxe/haxe.js"></script>
 <script src="components/try-haxe/lib/CodeMirror2/mode/javascript/javascript.js"></script>
