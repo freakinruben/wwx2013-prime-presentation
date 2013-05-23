@@ -110,14 +110,18 @@
 	-webkit-transition: none;
 }
 
-#title {
+/*#title {
 	background: #3a251a;
 	height: 100%;
-}
+}*/
 #title #prime-face {
 	margin: 3% auto;
 	display: block;
 	max-width: 20%;
+	background: #3a251a;
+	border-radius: 50%;
+	padding: .3em 2em 1.3em;
+	border: 18px solid #ccc;
 }
 #title #primevc {
 	width: 35%;
@@ -154,7 +158,7 @@ ol.timeline {
 .timeline.end:after    { margin: 0 auto 0; border: 4px solid #fb5244; }
 
 .timeline li {
-	margin: 0 auto 0;
+	margin: -.5em auto 0;
 	width: 30%;
 	border: 0 solid #fb5244;
 	padding: .5em 0;
@@ -212,3 +216,47 @@ ol.timeline {
 i.icon-emo-shoot {
 	padding-right: 1em;
 }
+
+#prime-overview {
+	height: 100%;
+}
+#prime-overview ul {
+	list-style: none;
+	display: block;
+	position: relative;
+	height: 100%;
+	margin: 0;
+	padding:0;
+}
+#prime-overview li {
+	position: absolute;
+	display: block;
+	margin: 0;
+	padding:0;
+}
+#prime-overview li span {
+	margin-left: .3em;
+	position: relative;
+	display: block;
+	top: 1.5em;
+	left: -.5em;
+	text-align: center;
+	min-width: 5.7em;
+	font-size: 70%;
+}
+i.prime {
+	background: #3a251a;
+	border-radius: 50%;
+	padding: .3em .2em;
+	border: 10px solid #ccc;
+	color: #fff;
+	font-size: 1.8em;
+}
+#overview-core       { left: 45%; top: 43%; }
+#overview-signals    { left: 45%; top: 2%; }
+#overview-bindable   { left: 65%; top: 25%; }
+#overview-mvc        { left: 68%; top: 59%; }
+#overview-display    { left: 53%; top: 85%; }
+#overview-layout     { left: 31%; top: 79%; }
+#overview-components { left: 21%; top: 49%; }
+#overview-css        { left: 27%; top: 18%; }

@@ -94,11 +94,11 @@ Same direction as your partner, you do knee clapp and high five
 			<li class="fragment"><h3><i class="icon-study"></i></h3>         <span class="note">same study, graphic media technology</span></li>
 			<li class="fragment"><h3><i class="icon-gauge"></i></h3>         <span class="note">Found out we both like to go the extra mile.</span></li>
 			<li class="fragment"><h3><i class="icon-heart-1"></i></h3>       <span class="note">we share a passion to make developing more fun and more productive</span></li>
-			<li class="fragment"><h3><i class="icon-docs"></i></h3>          <span class="note">We've been sharing ways to improve our productivity, new IDE's, programming languages and other life-hacking techniques</span></li>
 		</ol>
 	</section>
 	<section id="about-us-2">
 		<ol class="timeline end">
+			<li class="fragment"><h3><i class="icon-docs"></i></h3>          <span class="note">We've been sharing ways to improve our productivity, new IDE's, programming languages and other life-hacking techniques</span></li>
 			<li class="fragment"><h3><i class="icon-help"></i></h3>          <span class="note">In 2009 quited my job at Nestor (2009)</span></li>
 			<li class="fragment"><h3>Flex<i class="icon-flex"></i></h3>          <span class="note">building e-learning applications in Adobe Flex.</span></li>
 			<li class="fragment"><h3><i class="icon-cross"></i></h3>         <span class="note">pretty frustrated with Flex. Heavy, intertangled components</span></li>
@@ -182,14 +182,14 @@ Our libraries are designed to be:
 
 <section id="prime-overview">
 	<ul>
-		<li class="fragment" id="overview-core"><i class="icon-prime-core"></i><span>core</span></li>
-		<li class="fragment" id="overview-signals"><i class="icon-prime-signals"></i><span>Signals</span></li>
-		<li class="fragment" id="overview-bindable"><i class="icon-prime-bindable"></i><span>Bindable</span></li>
-		<li class="fragment" id="overview-mvc"><i class="icon-prime-mvc"></i><span>MVC</span></li>
-		<li class="fragment" id="overview-display"><i class="icon-prime-display"></i><span>Display</span></li>
-		<li class="fragment" id="overview-layout"><i class="icon-prime-layout"></i><span>Layout</span></li>
-		<li class="fragment" id="overview-components"><i class="icon-prime-components"></i><span>Components</span></li>
-		<li class="fragment" id="overview-css"><i class="icon-prime-css"></i><span>CSS</span></li>
+		<li id="overview-core"><i class="prime icon-prime-core"></i><span>core</span></li>
+		<li class="fragment" id="overview-signals"><i class="prime icon-prime-signals"></i><span>Signals</span></li>
+		<li class="fragment" id="overview-bindable"><i class="prime icon-prime-bindable"></i><span>Bindable</span></li>
+		<li class="fragment" id="overview-mvc"><i class="prime icon-prime-mvc"></i><span>MVC</span></li>
+		<li class="fragment" id="overview-display"><i class="prime icon-prime-display"></i><span>Display</span></li>
+		<li class="fragment" id="overview-layout"><i class="prime icon-prime-layout"></i><span>Layout</span></li>
+		<li class="fragment" id="overview-components"><i class="prime icon-prime-components"></i><span>Components</span></li>
+		<li class="fragment" id="overview-css"><i class="prime icon-prime-css"></i><span>CSS</span></li>
 	</ul>
 </section>
 
@@ -198,7 +198,7 @@ Our libraries are designed to be:
 <section id="signals">
 	<section id="signals-intro" class="intro">
 		<h1>Signals</h1>
-		<i class="icon-prime-signals"></i>
+		<i class="prime icon-prime-signals"></i>
 		<ul>
 			<li>Strongly-typed event-system</li>
 			<li>Intuïtive syntax-sugar</li>	
@@ -264,12 +264,12 @@ class Test {
 <section id="bindable">
 	<section id="bindable-intro" class="intro">
 		<h1>bindable</h1>
-		<i class="icon-prime-bindable"></i>
+		<i class="prime icon-prime-bindable"></i>
 		<p>data-types sending events on change</p>
 
 		<ul class="dependencies">
-			<li><i class="icon-prime-core"></i></li>
-			<li><i class="icon-prime-signals"></i></li>
+			<li><i class="prime icon-prime-core"></i></li>
+			<li><i class="prime icon-prime-signals"></i></li>
 		</ul>
 	</section>
 
@@ -308,7 +308,7 @@ class Test {
 <section id="mvc">
 	<section id="mvc-intro" class="intro">
 		<h1>MVC</h1>
-		<i class="icon-prime-mvc"></i>
+		<i class="prime icon-prime-mvc"></i>
 		<ul>
 			<li>reusable actors</li>
 			<li>typed MVC-references</li>
@@ -316,9 +316,9 @@ class Test {
 		</ul>
 
 		<ul class="dependencies">
-			<li><i class="icon-prime-core"></i></li>
-			<li><i class="icon-prime-signals"></i></li>
-			<li><i class="icon-prime-states"></i></li>
+			<li><i class="prime icon-prime-core"></i></li>
+			<li><i class="prime icon-prime-signals"></i></li>
+			<li><i class="prime icon-prime-states"></i></li>
 		</ul>
 	</section>
 
@@ -355,15 +355,15 @@ class SelectionController extends MVCActor&lt;Facade&gt; {}</code></pre>
 <section id="display">
 	<section id="display-intro" class="intro">
 		<h1>Display</h1>
-		<i class="icon-prime-display"></i>
+		<i class="prime icon-prime-display"></i>
 		<ul>
 			<li>Add signals for mouse/keyboard</li>
 			<li>Bindable display-list</li>
 		</ul>
 		<ul class="dependencies">
-			<li><i class="icon-prime-core"></i></li>
-			<li><i class="icon-prime-signals"></i></li>
-			<li><i class="icon-prime-bindable"></i></li>
+			<li><i class="prime icon-prime-core"></i></li>
+			<li><i class="prime icon-prime-signals"></i></li>
+			<li><i class="prime icon-prime-bindable"></i></li>
 		</ul>
 	</section>
 
@@ -385,6 +385,7 @@ class Test extends prime.gui.display.Sprite {
 		this.x = x; this.y = y;
 		funkify(prime.utils.Color.random());
 		changeColor .on( userEvents.mouse.rollOver, this );
+		changeColor .on( userEvents.mouse.rollOut,  this );
 		addUglyChild.on( userEvents.mouse.click,    this );
 	}
 
@@ -409,17 +410,17 @@ class Test extends prime.gui.display.Sprite {
 <section id="layout">
 	<section id="layout-intro" class="intro">
 		<h1>Layout</h1>
-		<i class="icon-prime-layout"></i>
+		<i class="prime icon-prime-layout"></i>
 		<ul>
 			<li>Positioning and sizing via algorithms</li>
 			<li>SVG, DOM, Bitmaps, etc.</li>
 			<li>Extendable</li>
 		</ul>
 		<ul class="dependencies">
-			<li><i class="icon-prime-core"></i></li>
-			<li><i class="icon-prime-signals"></i></li>
-			<li><i class="icon-prime-bindable"></i></li>
-			<li><i class="icon-prime-states"></i></li>
+			<li><i class="prime icon-prime-core"></i></li>
+			<li><i class="prime icon-prime-signals"></i></li>
+			<li><i class="prime icon-prime-bindable"></i></li>
+			<li><i class="prime icon-prime-states"></i></li>
 		</ul>
 	</section>
 
@@ -433,6 +434,11 @@ class Test extends prime.gui.display.Sprite {
 		<img src="img/LayoutExample.png">
 		<img src="img/LayoutActors1.svg" class="fragment">
 		<img src="img/LayoutActors2.svg" class="fragment">
+	</section>
+
+	<section id="layout-example-layoutclient">
+		<h2>Example LayoutClient</h2>
+		TODO
 	</section>
 
 	<section id="layoutcontainer">
@@ -451,11 +457,6 @@ class Test extends prime.gui.display.Sprite {
 		</ul>
 	</section>
 
-	<section id="layout-example-layoutclient">
-		<h2>Example LayoutClient</h2>
-		TODO
-	</section>
-
 	<section id="layout-example-algorithms">
 		<h2>Example Algorithms</h2>
 		TODO
@@ -467,14 +468,14 @@ class Test extends prime.gui.display.Sprite {
 <section id="components">
 	<section id="components-intro" class="intro">
 		<h1>Components</h1>
-		<i class="icon-prime-components"></i>
+		<i class="prime icon-prime-components"></i>
 		<ul class="dependencies">
-			<li><i class="icon-prime-core"></i></li>
-			<li><i class="icon-prime-signals"></i></li>
-			<li><i class="icon-prime-bindable"></i></li>
-			<li><i class="icon-prime-states"></i></li>
-			<li><i class="icon-prime-layout"></i></li>
-			<li><i class="icon-prime-css"></i></li>
+			<li><i class="prime icon-prime-core"></i></li>
+			<li><i class="prime icon-prime-signals"></i></li>
+			<li><i class="prime icon-prime-bindable"></i></li>
+			<li><i class="prime icon-prime-states"></i></li>
+			<li><i class="prime icon-prime-layout"></i></li>
+			<li><i class="prime icon-prime-css"></i></li>
 		</ul>
 	</section>
 
@@ -510,7 +511,7 @@ class Test extends prime.gui.display.Sprite {
 <section id="css">
 	<section id="css-intro" class="intro">
 		<h1>CSS</h1>
-		<i class="icon-prime-css"></i>
+		<i class="prime icon-prime-css"></i>
 		<ul>
 			<li>Compiled CSS</li>
 			<li>support for most css1, css2 and css3 properties</li>
