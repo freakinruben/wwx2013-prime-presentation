@@ -84,7 +84,7 @@
 .reveal .js-canvas         { padding: 1em .5em 0; }
 .reveal iframe             { width: 100%; background: #fff; height: 40%; }
 .compiler-out              { display: none; }
-.reveal .CodeMirror-scroll { padding: .1em .4em; max-height: 19em; overflow: scroll; }
+.reveal .CodeMirror-scroll { padding: .1em .4em; max-height: 17em; overflow: scroll; }
 .reveal .messages pre {
 	margin: 0;
 	padding: 1em;
@@ -260,3 +260,29 @@ i.prime {
 #overview-layout     { left: 31%; top: 79%; }
 #overview-components { left: 21%; top: 49%; }
 #overview-css        { left: 27%; top: 18%; }
+
+
+ul.dependencies {
+	list-style: none;
+}
+ul.dependencies li {
+	float: left;
+	margin-bottom: .3em;
+}
+ul.dependencies li i.prime {
+	font-size: 100%;
+	border-width: 4px;
+}
+ul.dependencies li:not(:last-child):after {
+	content: "+";
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: 0 .4em;
+}
+
+i.lib.prime {
+	position: absolute;
+	top: .3em;
+	left: 2em;
+	padding: .4em .2em;
+}
