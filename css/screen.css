@@ -139,24 +139,26 @@
 
 ol.timeline {
 	list-style: none;
-	margin: 14em 0 0 0;
-	counter-reset: timeline-counter;
+	margin: 0;
+	padding: 0;
+	display: block;
 }
-.timeline:before, .timeline:after {
+.timeline.begin:before, .timeline.end:after {
 	display: block;
 	width: 2.5em;
 	height: 2.5em;
 	border-radius: 50%;
 	content: "";
 }
-.timeline:before { background: #fb5244; margin: -12em auto 11em; }
-.timeline:after  { margin: -2em auto 2em; border: 4px solid #fb5244; }
+.timeline.begin:before { background: #fb5244; margin: 0 auto 0; }
+.timeline.end:after    { margin: 0 auto 0; border: 4px solid #fb5244; }
 
 .timeline li {
-	margin: -11em auto 1.8em;
-	width: 50%;
+	margin: 0 auto 0;
+	width: 30%;
 	border: 0 solid #fb5244;
-	padding: 2em 0;
+	padding: .5em 0;
+	position: relative;
 }
 .timeline li:nth-child(even):before {
 	width: 20%;
@@ -167,32 +169,25 @@ ol.timeline {
 .timeline li:before {
 	border-top: 3px solid #fb5244;
 	position: absolute;
-	top: 2.7em;
+	top: 1.2em;
 	content: "";
 }
 .timeline li:nth-child(even) {
 	border-left-width: 4px;
-	left: 25%;
+	left: 15%;
 }
 .timeline li:nth-child(odd) {
 	border-right-width: 4px;
-	right: 25%;
-}
-.timeline i, #situation-world i {
-	position: absolute;
-	padding: 0 .1em;
-	line-height: 1.6;
-
-	border-radius: 50%;
-	font-size: 2.7em;
-	color: #00a5cd;
+	right: 15.01%;
 }
 .timeline i {
-	background: #efefef;
-	top: 25%;
+	position: relative;
+	line-height: 1;
+
+	border-radius: 50%;
+	font-size: 1em;
+	color: #fff;
 }
-.timeline li:nth-child(even) i { left: .4em; }
-.timeline li:nth-child(odd) i { right: .4em; }
 
 
 .timeline li h3 {
@@ -202,11 +197,7 @@ ol.timeline {
 	display: inline;
 	position: relative;
 	border-radius: 30px 30px;
-}
-.timeline li h3:before {
-	content: counter(timeline-counter) ". ";
-	counter-increment: timeline-counter;
-	/*margin-right: 10px;*/
+	text-transform: none;
 }
 .timeline li:nth-child(even) h3, .timeline li:nth-child(even) p {
 	margin-left: 20%;
@@ -217,4 +208,7 @@ ol.timeline {
 .timeline li p {
 	padding: 1em 13% 2em 7%;
 	width: 70%;
+}
+i.icon-emo-shoot {
+	padding-right: 1em;
 }
