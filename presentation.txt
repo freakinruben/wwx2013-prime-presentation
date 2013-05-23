@@ -106,6 +106,7 @@ Design choices
 Todo
 + signals uitleg
 + mvc uitleg
+- bindable uitleg
 - display uitleg
 - layout uitleg
 - components uitleg
