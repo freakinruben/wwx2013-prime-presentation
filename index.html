@@ -70,22 +70,10 @@ Same direction as your partner, you do knee clapp and high five
 </section>
 
 
-
-<section id="audience-questions">
-<ul>
-	<li>How many game-developers?</li>
-	<li>Who builds application?</li>
-	<li>Who is frustrated with building standard UI-components?</li>
-</ul>
-	<aside class="notes">
-	</aside>
-</section>
-
-
 <section id="about-us">
 	<section id="about-us-1">
 		<ol class="timeline begin">
-			<li class="fragment"><h3><i class="icon-mill"></i></h3>          <span class="note">from Netherlands</span></li>
+			<li class="fragment"><h3><i class="icon-mill">the Netherlands</i></h3>          <span class="note">from Netherlands</span></li>
 			<li class="fragment"><h3>CiteFlow</h3>      <span class="note">co-founder of CiteFlow, we give organisations insight in what knowledge their employees have.</span></li>
 			<li class="fragment"><h3><i class="icon-school"></i></h3>        <span class="note">programming at age 12</span></li>
 			<li class="fragment"><h3><i class="icon-tree-1"></i></h3>        <span class="note">met Danny at some camp</span></li>
@@ -99,9 +87,9 @@ Same direction as your partner, you do knee clapp and high five
 	<section id="about-us-2">
 		<ol class="timeline end">
 			<li class="fragment"><h3><i class="icon-docs"></i></h3>          <span class="note">We've been sharing ways to improve our productivity, new IDE's, programming languages and other life-hacking techniques</span></li>
-			<li class="fragment"><h3><i class="icon-help"></i></h3>          <span class="note">In 2009 quited my job at Nestor (2009)</span></li>
 			<li class="fragment"><h3>Flex<i class="icon-flex"></i></h3>          <span class="note">building e-learning applications in Adobe Flex.</span></li>
-			<li class="fragment"><h3><i class="icon-cross"></i></h3>         <span class="note">pretty frustrated with Flex. Heavy, intertangled components</span></li>
+			<li class="fragment"><h3><i class="icon-emo-shoot"></i>Fx</h3>         <span class="note">pretty frustrated with Flex. Heavy, intertangled components</span></li>
+			<li class="fragment"><h3><i class="icon-help"></i></h3>          <span class="note">In 2009 quited my job at Nestor (2009)</span></li>
 			<li class="fragment"><h3><i class="icon-address"></i></h3>       <span class="note">started doing freelance jobs</span></li>
 			<li class="fragment"><h3>Haxe</h3>          <span class="note">Danny introduced me to Haxe</span></li>
 			<li class="fragment"><h3>OnlineTouch</h3>   <span class="note">hired by OnlineTouch to build an editor for creating interactive magazines online</span></li>
@@ -130,6 +118,33 @@ Same direction as your partner, you do knee clapp and high five
 		[logo]     * Lot's of code an ideas from this application was reusable and abstracted. This formed the base for prime.vc (2010)
 		</aside>
 	</section>
+</section>
+
+
+
+<section id="audience-questions">
+<ul>
+	<li>How many game-developers?</li>
+	<li>Who builds application?</li>
+	<li>Who is frustrated with building standard UI-components?</li>
+</ul>
+	<aside class="notes">
+	</aside>
+</section>
+
+
+
+<section id="prime-overview">
+	<ul>
+		<li id="overview-core"><i class="prime icon-prime-core"></i><span>core</span></li>
+		<li class="fragment" id="overview-signals"><i class="prime icon-prime-signals"></i><span>Signals</span></li>
+		<li class="fragment" id="overview-bindable"><i class="prime icon-prime-bindable"></i><span>Bindable</span></li>
+		<li class="fragment" id="overview-mvc"><i class="prime icon-prime-mvc"></i><span>MVC</span></li>
+		<li class="fragment" id="overview-display"><i class="prime icon-prime-display"></i><span>Display</span></li>
+		<li class="fragment" id="overview-layout"><i class="prime icon-prime-layout"></i><span>Layout</span></li>
+		<li class="fragment" id="overview-components"><i class="prime icon-prime-components"></i><span>Components</span></li>
+		<li class="fragment" id="overview-css"><i class="prime icon-prime-css"></i><span>CSS</span></li>
+	</ul>
 </section>
 
 
@@ -176,21 +191,6 @@ Our libraries are designed to be:
 	* fast
 		performed lot of benchmarking to find out the fastest procedures (depending on platform)
 	</aside>
-</section>
-
-
-
-<section id="prime-overview">
-	<ul>
-		<li id="overview-core"><i class="prime icon-prime-core"></i><span>core</span></li>
-		<li class="fragment" id="overview-signals"><i class="prime icon-prime-signals"></i><span>Signals</span></li>
-		<li class="fragment" id="overview-bindable"><i class="prime icon-prime-bindable"></i><span>Bindable</span></li>
-		<li class="fragment" id="overview-mvc"><i class="prime icon-prime-mvc"></i><span>MVC</span></li>
-		<li class="fragment" id="overview-display"><i class="prime icon-prime-display"></i><span>Display</span></li>
-		<li class="fragment" id="overview-layout"><i class="prime icon-prime-layout"></i><span>Layout</span></li>
-		<li class="fragment" id="overview-components"><i class="prime icon-prime-components"></i><span>Components</span></li>
-		<li class="fragment" id="overview-css"><i class="prime icon-prime-css"></i><span>CSS</span></li>
-	</ul>
 </section>
 
 
@@ -276,19 +276,118 @@ class Test {
 
 	<section id="bindable-example-simple1">
 		<h2>Bindable Object</h2>
-		TODO
+		<textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example1-code">
+import prime.bindable.Bindable;
+ using prime.utils.Bind;
+class Test {
+	static function main () new Test()
+	function new () {
+		var a = new Bindable<String>("WWX '13");
+		function (newV, oldV) {
+			trace("a changed from "+oldV+" => "+newV);
+		}.on(a.change, this);
+		trace(a.value);
+		a.value = "Enjoy WWX '13";
+	}
+}</textarea>
+	</section>
+
+
+	<section id="bindable-example-simple2">
+		<h2>Binding Objects</h2>
+		<textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example2-code">
+import prime.bindable.Bindable;
+class Test {
+	static function main () new Test()
+	function new () {
+		var a = new Bindable<String>("Value A");
+		var b = new Bindable<String>("Value B");
+		trace("A: "+a.value);
+		trace("B: "+b.value+"\n");
+		b.bind(a);
+
+		trace("change A");
+		a.value = "Enjoy WWX '13";
+		trace("A: "+a.value);
+		trace("B: "+b.value+"\n");
+
+		trace("change B");
+		b.value = "Back to value B";
+		trace("A: "+a.value);
+		trace("B: "+b.value);
+	}
+}</textarea>
 	</section>
 
 
 	<section id="bindable-example-pairing">
 		<h2>Pairing Objects</h2>
-		TODO
+		<textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example3-code">
+import prime.bindable.Bindable;
+class Test {
+	static function main () new Test()
+	function new () {
+		var a = new Bindable<String>("Value A");
+		var b = new Bindable<String>("Value B");
+		trace("A: "+a.value);
+		trace("B: "+b.value+"\n");
+		a.pair(b);
+
+		trace("change A");
+		a.value = "Enjoy WWX '13";
+		trace("A: "+a.value);
+		trace("B: "+b.value+"\n");
+
+		trace("change B");
+		b.value = "Back to value B";
+		trace("A: "+a.value);
+		trace("B: "+b.value);
+	}
+}</textarea>
 	</section>
 
 
 	<section id="bindable-example-arraylist">
-		<h2>Bindable ArrayList</h2>
-		TODO
+		<h2>ArrayList</h2>
+		<textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example4-code">
+import prime.bindable.collections.ArrayList;
+ using prime.utils.Bind;
+class Test {
+	static function main () new Test()
+	function new () {
+		var a = "value 1"; var b = "value2";
+		var l = new ArrayList<String>();
+		function (c) { trace(c); }.on(l.change, this);
+		l.add(a);
+		l.add(b);
+		trace(l);
+		l.remove(a);
+	}
+}</textarea>
+	</section>
+
+
+	<section id="bindable-example-arraylist2">
+		<h2>Binding ArrayList</h2>
+		<textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code">
+import prime.bindable.collections.ArrayList;
+class Test {
+	static function main () new Test()
+	function new () {
+		var a = "val1"; var b = "val2"; var c = "val3";
+		var l1 = new ArrayList<String>();
+		var l2 = new ArrayList<String>();
+		l1.add(a);
+		l2.bind(l1);
+		trace("l1: "+l1);
+		trace("l2: "+l2+"\n");
+		l1.add(b);
+		l2.add(c);
+		trace("l1: "+l1);
+		trace("l2: "+l2);
+		l1.remove(a);
+	}
+}</textarea>
 	</section>
 
 
@@ -432,8 +531,8 @@ class Test extends prime.gui.display.Sprite {
 	<section id="layoutclients">
 		<h2>LayoutClients</h2>
 		<img src="img/LayoutExample.png">
-		<img src="img/LayoutActors1.svg" class="fragment">
-		<img src="img/LayoutActors2.svg" class="fragment">
+		<img src="img/LayoutActors1.svg" class="fragment" id="layout-actors1">
+		<img src="img/LayoutActors2.svg" class="fragment" id="layout-actors2">
 	</section>
 
 	<section id="layout-example-layoutclient">
@@ -546,7 +645,7 @@ class Test extends prime.gui.display.Sprite {
 </div></div>
 <script src="components/reveal.js/lib/js/head.min.js"></script>
 <script src="components/reveal.js/js/reveal.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="components/reveal.js/js/jquery.min.js"></script>
 <script src="components/try-haxe/lib/CodeMirror2/lib/codemirror.js"></script>
 <script src="components/try-haxe/lib/CodeMirror2/mode/haxe/haxe.js"></script>
 <script src="components/try-haxe/lib/CodeMirror2/mode/javascript/javascript.js"></script>
