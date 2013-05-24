@@ -16,7 +16,7 @@
 </g>
 <!-- facade&#45;&gt;view -->
 <g id="edge2" class="edge"><title>facade&#45;&gt;view</title>
-<path fill="none" stroke="black" d="M290.373,-204.095C283.065,-200.136 274.331,-195.404 265.955,-190.866"/>
+<path fill="none" stroke="white" d="M290.373,-204.095C283.065,-200.136 274.331,-195.404 265.955,-190.866"/>
 </g>
 <!-- mediator1 -->
 <g id="node11" class="node"><title>mediator1</title>
@@ -25,7 +25,7 @@
 </g>
 <!-- view&#45;&gt;mediator1 -->
 <g id="edge12" class="edge"><title>view&#45;&gt;mediator1</title>
-<path fill="none" stroke="black" d="M207.225,-197.518C182.805,-219.066 147.854,-249.907 128.822,-266.701"/>
+<path fill="none" stroke="white" d="M207.225,-197.518C182.805,-219.066 147.854,-249.907 128.822,-266.701"/>
 </g>
 <!-- mediator2 -->
 <g id="node12" class="node"><title>mediator2</title>
@@ -34,7 +34,7 @@
 </g>
 <!-- view&#45;&gt;mediator2 -->
 <g id="edge14" class="edge"><title>view&#45;&gt;mediator2</title>
-<path fill="none" stroke="black" d="M207.024,-149.575C200.571,-143.858 193.964,-138.005 188.436,-133.107"/>
+<path fill="none" stroke="white" d="M207.024,-149.575C200.571,-143.858 193.964,-138.005 188.436,-133.107"/>
 </g>
 <!-- window -->
 <g id="node20" class="node"><title>window</title>
@@ -43,7 +43,7 @@
 </g>
 <!-- view&#45;&gt;window -->
 <g id="edge16" class="edge"><title>view&#45;&gt;window</title>
-<path fill="none" stroke="black" d="M254.641,-143.996C272.156,-118.513 296.843,-82.5974 311.599,-61.1288"/>
+<path fill="none" stroke="white" d="M254.641,-143.996C272.156,-118.513 296.843,-82.5974 311.599,-61.1288"/>
 </g>
 <!-- gui1 -->
 <g id="node17" class="node"><title>gui1</title>
@@ -52,7 +52,7 @@
 </g>
 <!-- mediator1&#45;&gt;gui1 -->
 <g id="edge18" class="edge"><title>mediator1&#45;&gt;gui1</title>
-<path fill="none" stroke="black" d="M96.8309,-278.721C89.4281,-278.721 80.6199,-278.721 72.0368,-278.721"/>
+<path fill="none" stroke="white" d="M96.8309,-278.721C89.4281,-278.721 80.6199,-278.721 72.0368,-278.721"/>
 </g>
 <!-- gui2 -->
 <g id="node18" class="node"><title>gui2</title>
@@ -61,7 +61,7 @@
 </g>
 <!-- mediator2&#45;&gt;gui2 -->
 <g id="edge20" class="edge"><title>mediator2&#45;&gt;gui2</title>
-<path fill="none" stroke="black" d="M156.599,-123.011C143.218,-124.358 124.653,-126.226 108.348,-127.867"/>
+<path fill="none" stroke="white" d="M156.599,-123.011C143.218,-124.358 124.653,-126.226 108.348,-127.867"/>
 </g>
 <!-- gui3 -->
 <g id="node19" class="node"><title>gui3</title>
@@ -70,7 +70,7 @@
 </g>
 <!-- mediator2&#45;&gt;gui3 -->
 <g id="edge22" class="edge"><title>mediator2&#45;&gt;gui3</title>
-<path fill="none" stroke="black" d="M174.575,-102.72C174.19,-83.9421 173.596,-55.0037 173.212,-36.2839"/>
+<path fill="none" stroke="white" d="M174.575,-102.72C174.19,-83.9421 173.596,-55.0037 173.212,-36.2839"/>
 </g>
 </g>
 </svg>

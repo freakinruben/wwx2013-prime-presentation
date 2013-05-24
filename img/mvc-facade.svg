@@ -11,11 +11,11 @@
 <!-- <polygon fill="white" stroke="white" points="-4,5 -4,-496.262 553.646,-496.262 553.646,5 -4,5"/> -->
 <!-- facade -->
 <g id="node1" class="node"><title>facade</title>
-<polygon fill="none" stroke="black" points="307.809,-231.541 272.194,-213.541 307.809,-195.541 343.425,-213.541 307.809,-231.541"/>
-<polyline fill="none" stroke="black" points="282.904,-218.954 282.904,-208.128 "/>
-<polyline fill="none" stroke="black" points="297.099,-200.954 318.519,-200.954 "/>
-<polyline fill="none" stroke="black" points="332.715,-208.128 332.715,-218.954 "/>
-<polyline fill="none" stroke="black" points="318.519,-226.128 297.099,-226.128 "/>
+<polygon fill="white" stroke="black" points="307.809,-231.541 272.194,-213.541 307.809,-195.541 343.425,-213.541 307.809,-231.541"/>
+<polyline fill="white" stroke="black" points="282.904,-218.954 282.904,-208.128 "/>
+<polyline fill="white" stroke="black" points="297.099,-200.954 318.519,-200.954 "/>
+<polyline fill="white" stroke="black" points="332.715,-208.128 332.715,-218.954 "/>
+<polyline fill="white" stroke="black" points="318.519,-226.128 297.099,-226.128 "/>
 <text text-anchor="middle" x="307.809" y="-211.375" font-family="Verdana" font-size="8.00">facade</text>
 </g>
 </g>

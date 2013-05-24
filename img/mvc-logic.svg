@@ -16,7 +16,7 @@
 </g>
 <!-- facade&#45;&gt;logic -->
 <g id="edge4" class="edge"><title>facade&#45;&gt;logic</title>
-<path fill="none" stroke="black" d="M301.409,-228.349C289.697,-255.446 264.554,-313.616 248.57,-350.597"/>
+<path fill="none" stroke="white" d="M301.409,-228.349C289.697,-255.446 264.554,-313.616 248.57,-350.597"/>
 </g>
 
 <!-- controller1 -->
@@ -26,7 +26,7 @@
 </g>
 <!-- logic&#45;&gt;controller1 -->
 <g id="edge24" class="edge"><title>logic&#45;&gt;controller1</title>
-<path fill="none" stroke="black" d="M227.798,-419.269C225.5,-431.946 223.007,-445.695 221.089,-456.274"/>
+<path fill="none" stroke="white" d="M227.798,-419.269C225.5,-431.946 223.007,-445.695 221.089,-456.274"/>
 </g>
 <!-- controller2 -->
 <g id="node9" class="node"><title>controller2</title>
@@ -35,7 +35,7 @@
 </g>
 <!-- logic&#45;&gt;controller2 -->
 <g id="edge26" class="edge"><title>logic&#45;&gt;controller2</title>
-<path fill="none" stroke="black" d="M198.21,-385.871C185.348,-386.624 171.399,-387.441 160.666,-388.07"/>
+<path fill="none" stroke="white" d="M198.21,-385.871C185.348,-386.624 171.399,-387.441 160.666,-388.07"/>
 </g>
 </g>
 </svg>

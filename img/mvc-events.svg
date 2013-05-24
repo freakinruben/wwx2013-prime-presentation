@@ -15,7 +15,7 @@
 </g>
 <!-- facade&#45;&gt;events -->
 <g id="edge8" class="edge"><title>facade&#45;&gt;events</title>
-<path fill="none" stroke="black" d="M326.294,-204.615C347.881,-194.19 383.982,-176.756 410.283,-164.055"/>
+<path fill="none" stroke="white" d="M326.294,-204.615C347.881,-194.19 383.982,-176.756 410.283,-164.055"/>
 </g>
 <!-- signals1 -->
 <g id="node14" class="node"><title>signals1</title>
@@ -24,7 +24,7 @@
 </g>
 <!-- events&#45;&gt;signals1 -->
 <g id="edge28" class="edge"><title>events&#45;&gt;signals1</title>
-<path fill="none" stroke="black" d="M440.534,-112.343C439.732,-99.4836 438.862,-85.5383 438.193,-74.8078"/>
+<path fill="none" stroke="white" d="M440.534,-112.343C439.732,-99.4836 438.862,-85.5383 438.193,-74.8078"/>
 </g>
 <!-- signals2 -->
 <g id="node15" class="node"><title>signals2</title>
@@ -33,7 +33,7 @@
 </g>
 <!-- events&#45;&gt;signals2 -->
 <g id="edge30" class="edge"><title>events&#45;&gt;signals2</title>
-<path fill="none" stroke="black" d="M477.256,-137.69C489.564,-133.88 502.911,-129.748 513.182,-126.569"/>
+<path fill="none" stroke="white" d="M477.256,-137.69C489.564,-133.88 502.911,-129.748 513.182,-126.569"/>
 </g>
 </g>
 </svg>

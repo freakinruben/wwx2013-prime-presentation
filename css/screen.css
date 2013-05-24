@@ -286,3 +286,16 @@ i.lib.prime {
 	left: 2em;
 	padding: .4em .2em;
 }
+
+#mvc,
+  #mvc-overview   { height: 100%; }
+#mvc-overview img { position: absolute; top: 10%; left: 18%; }
+#svg-mvc-facade   {  }
+#svg-mvc-logic    { top: 0%; left: 0%; }
+#svg-mvc-model    { top: 0%; left: 0%; }
+#svg-mvc-states   { top: 0%; left: 0%; }
+#svg-mvc-events   { top: 0%; left: 0%; }
+#svg-mvc-view     { top: 0%; left: 0%; }
+
+/*#layoutclients img.fragment { position: relative; }*/
+#layout-actors2 { margin-left: -17%; }

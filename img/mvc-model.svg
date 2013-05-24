@@ -15,11 +15,11 @@
 </g>
 <!-- facade&#45;&gt;model -->
 <g id="edge6" class="edge"><title>facade&#45;&gt;model</title>
-<path fill="none" stroke="black" d="M317.131,-227.046C321.507,-233.385 326.909,-241.212 332.174,-248.839"/>
+<path fill="none" stroke="white" d="M317.131,-227.046C321.507,-233.385 326.909,-241.212 332.174,-248.839"/>
 </g>
 <!-- service1 -->
 <g id="node2" class="node"><title>service1</title>
-<polygon fill="none" stroke="black" points="506.597,-334.629 465.171,-316.629 506.597,-298.629 548.023,-316.629 506.597,-334.629"/>
+<polygon fill="none" stroke="white" points="506.597,-334.629 465.171,-316.629 506.597,-298.629 548.023,-316.629 506.597,-334.629"/>
 <text text-anchor="middle" x="506.597" y="-314.462" font-family="Verdana" font-size="8.00">service1</text>
 </g>
 <!-- proxy1 -->
@@ -29,7 +29,7 @@
 </g>
 <!-- model&#45;&gt;proxy1 -->
 <g id="edge32" class="edge"><title>model&#45;&gt;proxy1</title>
-<path fill="none" stroke="black" d="M384.991,-295.616C392.624,-299.623 400.44,-303.725 406.979,-307.157"/>
+<path fill="none" stroke="white" d="M384.991,-295.616C392.624,-299.623 400.44,-303.725 406.979,-307.157"/>
 </g>
 <!-- proxy2 -->
 <g id="node5" class="node"><title>proxy2</title>
@@ -38,7 +38,7 @@
 </g>
 <!-- model&#45;&gt;proxy2 -->
 <g id="edge34" class="edge"><title>model&#45;&gt;proxy2</title>
-<path fill="none" stroke="black" d="M365.692,-312.714C368.749,-320.774 371.879,-329.028 374.498,-335.933"/>
+<path fill="none" stroke="white" d="M365.692,-312.714C368.749,-320.774 371.879,-329.028 374.498,-335.933"/>
 </g>
 <!-- proxy3 -->
 <g id="node6" class="node"><title>proxy3</title>
@@ -47,11 +47,11 @@
 </g>
 <!-- model&#45;&gt;proxy3 -->
 <g id="edge36" class="edge"><title>model&#45;&gt;proxy3</title>
-<path fill="none" stroke="black" d="M348.418,-314.811C347.379,-323.369 346.315,-332.132 345.425,-339.463"/>
+<path fill="none" stroke="white" d="M348.418,-314.811C347.379,-323.369 346.315,-332.132 345.425,-339.463"/>
 </g>
 <!-- proxy1&#45;&gt;service1 -->
 <g id="edge44" class="edge"><title>proxy1&#45;&gt;service1</title>
-<path fill="none" stroke="black" d="M441.083,-315.766C448.388,-315.863 457.13,-315.978 465.812,-316.092"/>
+<path fill="none" stroke="white" d="M441.083,-315.766C448.388,-315.863 457.13,-315.978 465.812,-316.092"/>
 </g>
 <!-- vo1 -->
 <g id="node40" class="node"><title>vo1</title>
@@ -60,7 +60,7 @@
 </g>
 <!-- proxy1&#45;&gt;vo1 -->
 <g id="edge38" class="edge"><title>proxy1&#45;&gt;vo1</title>
-<path fill="none" stroke="black" d="M433.438,-330.333C440.783,-340.68 450.637,-354.562 458.46,-365.581"/>
+<path fill="none" stroke="white" d="M433.438,-330.333C440.783,-340.68 450.637,-354.562 458.46,-365.581"/>
 </g>
 <!-- vo2 -->
 <g id="node44" class="node"><title>vo2</title>
@@ -69,7 +69,7 @@
 </g>
 <!-- proxy2&#45;&gt;vo2 -->
 <g id="edge42" class="edge"><title>proxy2&#45;&gt;vo2</title>
-<path fill="none" stroke="black" d="M387.398,-369.95C391.806,-381.572 397.618,-396.898 402.099,-408.712"/>
+<path fill="none" stroke="white" d="M387.398,-369.95C391.806,-381.572 397.618,-396.898 402.099,-408.712"/>
 </g>
 <!-- vo3 -->
 <g id="node42" class="node"><title>vo3</title>
@@ -78,7 +78,7 @@
 </g>
 <!-- proxy3&#45;&gt;vo3 -->
 <g id="edge40" class="edge"><title>proxy3&#45;&gt;vo3</title>
-<path fill="none" stroke="black" d="M341.039,-375.579C339.497,-388.281 337.449,-405.15 335.909,-417.83"/>
+<path fill="none" stroke="white" d="M341.039,-375.579C339.497,-388.281 337.449,-405.15 335.909,-417.83"/>
 </g>
 </g>
 </svg>
