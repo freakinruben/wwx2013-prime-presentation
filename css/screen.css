@@ -9,7 +9,7 @@
 	height: auto;
 }
 .demo > .CodeMirror-wrap {
-	width: 50%;
+	width: 55%;
 	float: left;
 	clear: left;
 }
@@ -55,7 +55,7 @@
 }
 .reveal .compiler-out {
 	position: relative;
-	width: 48%;
+	width: 45%;
 	float: left;
 	margin-left: 1em;
 	margin-right: -1em;

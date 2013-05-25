@@ -151,22 +151,8 @@ Same direction as your partner, you do knee clapp and high five
 
 <section id="demos">
 	<section id="demo-intro">
-		<h2>Demos</h2>
+		<h2>Demo</h2>
 	</section>
-	<section id="layout-demo"><textarea name="hx-source" class="code haxe-source" rows="10" id="layout-demo1">
-class Test extends prime.gui.core.UIWindow
-{
-	public static function main ()
-		prime.gui.display.Window.startup(function (stage) { return new Test(stage); })
-
-
-	override private function createChildren () {
-		for (i in 0...20)	attach( new prime.gui.core.UIGraphic() );
-		for (i in 0...20)	attach( new prime.gui.core.UIComponent() );
-		for (i in 0...20)	attach( new prime.gui.core.UIGraphic() );
-	}
-}
-</textarea></section>
 </section>
 
 
@@ -502,6 +488,22 @@ class Test extends prime.gui.display.Sprite {
 		graphics.drawRect(0,0,75,75);
 	}
 }</textarea></section>
+
+
+	<section id="display-core-demo"><textarea name="hx-source" class="code haxe-source" rows="10" id="display-core-demo">
+class Test extends prime.gui.core.UIWindow
+{
+	public static function main ()
+		prime.gui.display.Window.startup(function (stage) { return new Test(stage); })
+
+
+	override private function createChildren () {
+		for (i in 0...20)	attach( new prime.gui.core.UIGraphic() );
+		for (i in 0...20)	attach( new prime.gui.core.UIComponent() );
+		for (i in 0...20)	attach( new prime.gui.core.UIGraphic() );
+	}
+}
+</textarea></section>
 </section>
 
 
@@ -537,8 +539,35 @@ class Test extends prime.gui.display.Sprite {
 
 	<section id="layout-example-layoutclient">
 		<h2>Example LayoutClient</h2>
-		TODO
-	</section>
+		<textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code">
+import prime.layout.LayoutClient;
+import prime.gui.display.Sprite;
+import prime.core.geom.Box;
+ using prime.utils.Bind;
+
+class Test {
+	static var sprite = new Sprite();
+	static var layout = new LayoutClient(100, 50);
+	static function main () {
+		layout.margin = new Box(10);
+		flash.Lib.current.stage.addChild(sprite);
+		redraw.on(layout.changed, sprite);
+		move.on(sprite.userEvents.mouse.click, sprite);
+		redraw();
+	}
+
+	static function move () layout.x += 10
+
+	static function redraw () {
+	trace("redraw");
+		var g = sprite.graphics;
+		var l = layout.innerBounds;
+		g.clear();
+		g.beginFill(0xff0000);
+		g.drawRect(l.left, l.top, l.width, l.height);
+		g.endFill();
+	}
+}</textarea></section>
 
 	<section id="layoutcontainer">
 		<h2>LayoutContainer</h2>
@@ -558,7 +587,39 @@ class Test extends prime.gui.display.Sprite {
 
 	<section id="layout-example-algorithms">
 		<h2>Example Algorithms</h2>
-		TODO
+		<textarea name="hx-source" class="code haxe-source" rows="10" id="layout-algorithms-demo">
+import prime.gui.display.Window;
+import prime.gui.core.UIGraphic;
+import prime.layout.algorithms.float.HorizontalFloatAlgorithm;
+import prime.layout.algorithms.float.VerticalFloatAlgorithm;
+import prime.layout.algorithms.circle.HorizontalCircleAlgorithm;
+import prime.layout.algorithms.circle.VerticalCircleAlgorithm;
+import prime.layout.algorithms.tile.SimpleTileAlgorithm;
+import prime.layout.algorithms.DynamicLayoutAlgorithm;
+ using prime.utils.Bind;
+ using Std;
+
+class Test extends prime.gui.core.UIWindow
+{
+	static var a = [
+		new HorizontalFloatAlgorithm(),
+		new VerticalFloatAlgorithm(),
+		new SimpleTileAlgorithm(),
+		new DynamicLayoutAlgorithm(
+			function () return new HorizontalCircleAlgorithm(),
+			function () return new VerticalCircleAlgorithm(),
+	];
+	public static function main ()
+		Window.startup(function (stage) { return new Test(stage); })
+
+	override private function createChildren () {
+		for (i in 0...15)	attach(new UIGraphic());
+		changeAlgorithm.on(userEvents.mouse.click, this);
+	}
+
+	function changeAlgorithm ()
+		layoutContainer.algorithm = cast a[a.length.random()]
+}</textarea></section>
 	</section>
 </section>
 
