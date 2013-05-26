@@ -46,7 +46,7 @@
 
 
 
-<section id="handclapping">
+<!-- <section id="handclapping">
 	<aside class="notes">
 Like to do a small extercise. Stand up:
 	* knee clapp - hands up
@@ -56,7 +56,7 @@ Like to do a small extercise. Stand up:
 Very good. Rotate towards a neighbour and do a knee clapp and choose a random direction
 Same direction as your partner, you do knee clapp and high five
 	</aside>
-</section>
+</section> -->
 
 
 
@@ -65,7 +65,7 @@ Same direction as your partner, you do knee clapp and high five
 <ul>
 	<li>Libraries for building data-driven user-interfaces</li>
 	<li>Libraries are designed to be muli-purpose</li>
-	<li>Who's interested in helping us?</li>
+	<li>We need help</li>
 </ul>
 </section>
 
@@ -122,13 +122,21 @@ Same direction as your partner, you do knee clapp and high five
 
 
 
+<section id="demos">
+	<section id="demo-intro">
+		<h2>Demo</h2>
+	</section>
+</section>
+
+
+
 <section id="audience-questions">
-<ul>
-	<li>How many game-developers?</li>
-	<li>Who builds application?</li>
-	<li>Who is frustrated with building standard UI-components?</li>
-</ul>
 	<aside class="notes">
+<ul>
+	<li>Who builds applications?</li>
+	<li>How many game-developers?</li>
+	<li>Who is building it's own UI-components?</li>
+</ul>
 	</aside>
 </section>
 
@@ -149,21 +157,13 @@ Same direction as your partner, you do knee clapp and high five
 
 
 
-<section id="demos">
-	<section id="demo-intro">
-		<h2>Demo</h2>
-	</section>
-</section>
-
-
-
 <section id="about-prime">
-	<h2>Goals</h2>
+	<h1>Goals</h1>
 	<ul>
 		<li>cross platform</li>
 		<li>data-intensive applications</li>
 		<li>strongly typed</li>
-		<li>fast</li>
+		<li>snappy &amp; responsive</li>
 	</ul>
 	<aside class="notes">
 We believe it's possible to strongly reduce tedious and repeatable code.
@@ -181,13 +181,25 @@ Our libraries are designed to be:
 
 
 
+<section id="team">
+	<h1>Team</h1>
+	<ul>
+		<li><img src="img/andrew.png"><h3>Andrew Pahuru</h3></li>
+		<li><img src="img/danny.jpg"><h3>Danny Wilson</h3></li>
+		<li><img src="img/eze.jpg"><h3>Ezequiel Moreno</h3></li>
+		<li><img src="img/ruben.jpg"><h3>Ruben Weijers</h3></li>
+	</ul>
+</section>
+
+
+
 <section id="signals">
 	<section id="signals-intro" class="intro">
 		<h1>Signals</h1>
 		<i class="lib prime icon-prime-signals"></i>
 		<ul>
 			<li>Strongly-typed event-system</li>
-			<li>Intuïtive syntax-sugar</li>	
+			<li>Intuitive syntax-sugar</li>	
 			<li>Cross-platform</li>	
 		</ul>
 	</section>
@@ -218,7 +230,7 @@ class Test {
 	static function main() new Test()
 	function new () {
 		var s = new Signal2<Int,String>();
-		s.bind(this, function (a:Int,b:String) { trace("a: "+a+"; b: "+b); });
+		s.bind(this, function (a,b) trace("a: "+a+"; b: "+b));
 		s.observe(this, function () { trace("test"); });
 		s.send(5, "test");
 	}
@@ -488,22 +500,6 @@ class Test extends prime.gui.display.Sprite {
 		graphics.drawRect(0,0,75,75);
 	}
 }</textarea></section>
-
-
-	<section id="display-core-demo"><textarea name="hx-source" class="code haxe-source" rows="10" id="display-core-demo">
-class Test extends prime.gui.core.UIWindow
-{
-	public static function main ()
-		prime.gui.display.Window.startup(function (stage) { return new Test(stage); })
-
-
-	override private function createChildren () {
-		for (i in 0...20)	attach( new prime.gui.core.UIGraphic() );
-		for (i in 0...20)	attach( new prime.gui.core.UIComponent() );
-		for (i in 0...20)	attach( new prime.gui.core.UIGraphic() );
-	}
-}
-</textarea></section>
 </section>
 
 
@@ -588,29 +584,14 @@ class Test {
 	<section id="layout-example-algorithms">
 		<h2>Example Algorithms</h2>
 		<textarea name="hx-source" class="code haxe-source" rows="10" id="layout-algorithms-demo">
-import prime.gui.display.Window;
-import prime.gui.core.UIGraphic;
-import prime.layout.algorithms.float.HorizontalFloatAlgorithm;
-import prime.layout.algorithms.float.VerticalFloatAlgorithm;
-import prime.layout.algorithms.circle.HorizontalCircleAlgorithm;
-import prime.layout.algorithms.circle.VerticalCircleAlgorithm;
-import prime.layout.algorithms.tile.SimpleTileAlgorithm;
-import prime.layout.algorithms.DynamicLayoutAlgorithm;
+import Prime;
  using prime.utils.Bind;
  using Std;
 
 class Test extends prime.gui.core.UIWindow
 {
-	static var a = [
-		new HorizontalFloatAlgorithm(),
-		new VerticalFloatAlgorithm(),
-		new SimpleTileAlgorithm(),
-		new DynamicLayoutAlgorithm(
-			function () return new HorizontalCircleAlgorithm(),
-			function () return new VerticalCircleAlgorithm(),
-	];
 	public static function main ()
-		Window.startup(function (stage) { return new Test(stage); })
+		Window.startup(function (stage) return new Test(stage))
 
 	override private function createChildren () {
 		for (i in 0...15)	attach(new UIGraphic());
@@ -619,6 +600,20 @@ class Test extends prime.gui.core.UIWindow
 
 	function changeAlgorithm ()
 		layoutContainer.algorithm = cast a[a.length.random()]
+
+	static var a = [
+		new HorizontalFloat(left,   top),
+		new HorizontalFloat(center, bottom),
+		new VerticalFloat(top,      right),
+		new VerticalFloat(bottom,   left),
+		new SimpleTile(),
+		new SimpleTile(vertical),
+		new DynamicLayout(
+			function () return new HorizontalCircle(),
+			function () return new VerticalCircle()),
+		new DynamicLayout(
+			function () return new HorizontalCircle(),
+			function () return new VerticalFloat())];
 }</textarea></section>
 	</section>
 </section>
@@ -656,14 +651,98 @@ class Test extends prime.gui.core.UIWindow
 		</ul>
 	</section>
 
+
+	<section id="components-structure">
+		<h2>Component Structure</h2>
+		<ul>
+			<li>Layout</li>
+			<li>CSS</li>
+			<li>Behaviours</li>
+			<li>Skin</li>
+			<li>Transitions</li>
+			<li>Graphics</li>
+		</ul>
+	</section>
+
+
 	<section id="behaviours">
 		<h2>Behaviours</h2>
 		<ul>
 			<li>Inject behaviour</li>
 			<li>Re-use behaviours</li>
-			<li>Drag-n-drop, Scrolling, Rendering</li>
+			<li>Drag-n-drop / Scrolling / Rendering / Tooltip</li>
 		</ul>
 	</section>
+
+
+	<section id="behaviours2">
+		<h2>Behaviours</h2>
+		<pre><code>var button = new Button("buttonId");
+button.behaviours.add(new DirectToolTipBehaviour());</code></pre>
+	</section>
+
+
+	<section id="skin">
+		<h2>Skin</h2>
+		<p>Seperate graphics from component-logic</p>
+		<dl class="dl-horizontal">
+			<dt class="fragment">Button</dt><dd class="fragment">Icon and/or Label</dd>
+			<dt class="fragment">VideoPlayer</dt><dd class="fragment">what controls do you want</dd>
+			<dt class="fragment">Slider</dt><dd class="fragment">Use custom shapes</dd>
+		</dl>
+		<pre class="fragment"><code>Button {
+	skin: Class(primevc.gui.components.skins.ButtonIconSkin);
+}</code></pre>
+	</section>
+
+
+	<section id="transitions">
+		<h2>Transitions</h2>
+		<p>Effects that will be triggered on resize / move / show / hide / rotate / scale.</p>
+		<pre><code>Button {
+	show-transition: fade 500ms 0% 60%;
+}</code></pre>
+	</section>
+	
+	<section id="display-core-demo-css">
+		<h2>Basic CSS</h2>
+		<pre><code>@manifest url('Style.xml');
+@import url('../../../../styles/empty/BasicStyle.css');
+
+Test             { algorithm: tile; }
+Test UIGraphic   { background: #ddeeaa; }
+Test UIComponent { background: #eeaadd; }
+Test IDisplayObject {
+	width:  30px;
+	height: 50px;
+	margin: 20px 5px;
+	background: #ffaaaa;
+}
+Test UIComponent:hover {
+	background: #ff0000aa;
+	width:  80px;
+	height: 80px;
+}
+</code></pre>
+	</section>
+
+	<section id="display-core-demo">
+		<h2>Basic CSS</h2>
+		<textarea name="hx-source" class="code haxe-source" rows="10" id="display-core-demo">
+import Prime;
+class Test extends prime.gui.core.UIWindow
+{
+	public static function main ()
+		prime.gui.display.Window.startup(function (stage) { return new Test(stage); })
+
+
+	override private function createChildren () {
+		for (i in 0...20)	attach( new UIGraphic() );
+		for (i in 0...20)	attach( new UIComponent() );
+		for (i in 0...20)	attach( new UIGraphic() );
+	}
+}
+</textarea></section>
 </section>
 
 
@@ -693,13 +772,41 @@ class Test extends prime.gui.core.UIWindow
 		</ul>
 	</section>
 
-	<section id="example-css-code">
-		TODO
-	</section>
-
 	<section id="example-style-levels">
-		TODO
+		<pre><code>IDisplayable { show-transition: fade; }
+.example Test  { background: #ff0; }
+#example1 Test { background: #fff; }
+MenuBar {
+	width: 100%;
+	height: 20px;
+	algorithm: float-hor;
+	padding: 6px 0px;
+	background: linear-gradient( 90deg, #242424, #2B2B2B );
+}
+MenuBar Button {
+	background: #eee;
+	border: 1px solid #000;
+	border-radius: 10px;
+}</code></pre>
 	</section>
+</section>
+
+
+<section id="roadmap">
+	<h1>Roadmap</h1>
+	<ol class="timeline begin end">
+		<li class="fragment"><h3>Release Haxelibs</h3></li>
+		<li class="fragment"><h3>Documentation</h3></li>
+		<li class="fragment"><h3>Launch new website</h3></li>
+		<li class="fragment"><h3>Haxe 3</h3></li>
+		<li class="fragment"><h3>Extend JS Target</h3></li>
+	</ol>
+</section>
+
+
+<section id="questions">
+	<h1>Thanks!</h1>
+	<p>Questions?</p>
 </section>
 
 

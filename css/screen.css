@@ -101,6 +101,8 @@
 .messages i.icon-check  { color: #A6E22E; }
 .messages i.icon-cancel { color: #F92672; }
 
+.reveal.cube .slides section:not(.stack):before { background: none; }
+.reveal.cube .slides section:not(.stack):after { box-shadow: none; }
 .reveal section img {
 	margin: 0;
 	background: none;
@@ -299,3 +301,47 @@ i.lib.prime {
 
 /*#layoutclients img.fragment { position: relative; }*/
 #layout-actors2 { margin-left: -17%; }
+
+#team ul {
+	margin: 0;
+	list-style: none;
+}
+#team li { float: left; }
+#team img {
+	width: 5em;
+	border-radius: 50%;
+	border: 7px solid #eee;
+	margin: 0 1em .5em;
+}
+#team h3 {
+	font-size: 100%;
+	text-align: center;
+}
+
+.dl-horizontal:before,
+.dl-horizontal:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.dl-horizontal:after {
+  clear: both;
+}
+
+.dl-horizontal dt {
+  float: left;
+  width: 27%;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.dl-horizontal dd {
+  margin-left: 30%;
+  text-align: left;
+}
