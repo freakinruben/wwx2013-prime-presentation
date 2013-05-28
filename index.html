@@ -182,7 +182,7 @@ import prime.signals.Signal2;
 class Test {
 	static function main() new Test()
 	function new () {
-		var s = new Signal2<Int,String>();
+		var s = new Signal2&lt;Int,String&gt;();
 		s.bind(this, function (a,b) trace("a: "+a+"; b: "+b));
 		s.observe(this, function () { trace("test"); });
 		s.send(5, "test");
@@ -199,7 +199,7 @@ import prime.signals.Signal1;
 class Test {
 	static function main() new Test()
 	function new () {
-		var s = new Signal1<String>();
+		var s = new Signal1&lt;String&gt;();
 		function () { trace("test"); }.on(s,this);
 		function () { trace("test once"); }.onceOn(s,this);
 		function (p){ trace(p); }.on(s,this);
@@ -234,7 +234,7 @@ import prime.bindable.Bindable;
 class Test {
 	static function main () new Test()
 	function new () {
-		var a = new Bindable<String>("WWX '13");
+		var a = new Bindable&lt;String&gt;("WWX '13");
 		function (newV, oldV) {
 			trace("a changed from "+oldV+" => "+newV);
 		}.on(a.change, this);
@@ -252,8 +252,8 @@ import prime.bindable.Bindable;
 class Test {
 	static function main () new Test()
 	function new () {
-		var a = new Bindable<String>("Value A");
-		var b = new Bindable<String>("Value B");
+		var a = new Bindable&lt;String&gt;("Value A");
+		var b = new Bindable&lt;String&gt;("Value B");
 		trace("A: "+a.value);
 		trace("B: "+b.value+"\n");
 		b.bind(a);
@@ -279,8 +279,8 @@ import prime.bindable.Bindable;
 class Test {
 	static function main () new Test()
 	function new () {
-		var a = new Bindable<String>("Value A");
-		var b = new Bindable<String>("Value B");
+		var a = new Bindable&lt;String&gt;("Value A");
+		var b = new Bindable&lt;String&gt;("Value B");
 		trace("A: "+a.value);
 		trace("B: "+b.value+"\n");
 		a.pair(b);
@@ -308,7 +308,7 @@ class Test {
 	static function main () new Test()
 	function new () {
 		var a = "value 1"; var b = "value2";
-		var l = new ArrayList<String>();
+		var l = new ArrayList&lt;String&gt;();
 		function (c) { trace(c); }.on(l.change, this);
 		l.add(a);
 		l.add(b);
@@ -327,8 +327,8 @@ class Test {
 	static function main () new Test()
 	function new () {
 		var a = "val1"; var b = "val2"; var c = "val3";
-		var l1 = new ArrayList<String>();
-		var l2 = new ArrayList<String>();
+		var l1 = new ArrayList&lt;String&gt;();
+		var l2 = new ArrayList&lt;String&gt;();
 		l1.add(a);
 		l2.bind(l1);
 		trace("l1: "+l1);
