@@ -176,7 +176,7 @@ signal.bind( this, actOnSignal );                   // binding them together</co
 
 	<section id="signals-example1">
 		<h2>Binding, observing</h2>
-		<textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example1-code">
+		<pre><!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example1-code"> --><code>
 import prime.signals.Signal2;
 
 class Test {
@@ -187,12 +187,13 @@ class Test {
 		s.observe(this, function () { trace("test"); });
 		s.send(5, "test");
 	}
-}</textarea></section>
+}</code></pre></code></pre><!-- </textarea> -->
+</section>
 
 
 	<section id="signals-example2">
 		<h2>Syntax sugar</h2>
-		<textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example2-code">
+		<pre><!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example2-code">--><code>
 import prime.signals.Signal1;
  using prime.utils.Bind;
 class Test {
@@ -206,7 +207,7 @@ class Test {
 		s.send("argument1");
 		s.send("argument2");
 	}
-}</textarea></section>
+}</code></pre><!-- </textarea> --></section>
 
 </section>
 
@@ -227,7 +228,7 @@ class Test {
 
 	<section id="bindable-example-simple1">
 		<h2>Bindable Object</h2>
-		<textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example1-code">
+		<pre><!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example1-code">--><code>
 import prime.bindable.Bindable;
  using prime.utils.Bind;
 class Test {
@@ -240,13 +241,13 @@ class Test {
 		trace(a.value);
 		a.value = "Enjoy WWX '13";
 	}
-}</textarea>
+}</code></pre><!-- </textarea> -->
 	</section>
 
 
 	<section id="bindable-example-simple2">
 		<h2>Binding Objects</h2>
-		<textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example2-code">
+		<pre><!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example2-code">--><code>
 import prime.bindable.Bindable;
 class Test {
 	static function main () new Test()
@@ -267,13 +268,13 @@ class Test {
 		trace("A: "+a.value);
 		trace("B: "+b.value);
 	}
-}</textarea>
+}</code></pre><!-- </textarea> -->
 	</section>
 
 
 	<section id="bindable-example-pairing">
 		<h2>Pairing Objects</h2>
-		<textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example3-code">
+		<pre><!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example3-code">--><code>
 import prime.bindable.Bindable;
 class Test {
 	static function main () new Test()
@@ -294,13 +295,13 @@ class Test {
 		trace("A: "+a.value);
 		trace("B: "+b.value);
 	}
-}</textarea>
+}</code></pre><!-- </textarea> -->
 	</section>
 
 
 	<section id="bindable-example-arraylist">
 		<h2>ArrayList</h2>
-		<textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example4-code">
+		<pre><!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example4-code">--><code>
 import prime.bindable.collections.ArrayList;
  using prime.utils.Bind;
 class Test {
@@ -314,13 +315,13 @@ class Test {
 		trace(l);
 		l.remove(a);
 	}
-}</textarea>
+}</code></pre><!-- </textarea> -->
 	</section>
 
 
 	<section id="bindable-example-arraylist2">
 		<h2>Binding ArrayList</h2>
-		<textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code">
+		<pre><!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code">--><code>
 import prime.bindable.collections.ArrayList;
 class Test {
 	static function main () new Test()
@@ -338,7 +339,7 @@ class Test {
 		trace("l2: "+l2);
 		l1.remove(a);
 	}
-}</textarea>
+}</code></pre><!-- </textarea> -->
 	</section>
 
 
@@ -420,7 +421,7 @@ class SelectionController extends MVCActor&lt;Facade&gt; {}</code></pre>
 
 	<section id="display-example1">
 		<h2>Adding children</h2>
-<textarea name="hx-source" class="code haxe-source" rows="10" id="display-example1-code">
+<pre><!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="display-example1-code">--><code>
 import prime.gui.events.MouseEvents;
  using prime.utils.Bind;
 
@@ -452,7 +453,7 @@ class Test extends prime.gui.display.Sprite {
 		graphics.beginFill(color);
 		graphics.drawRect(0,0,75,75);
 	}
-}</textarea></section>
+}</code></pre><!-- </textarea> --></section>
 </section>
 
 
@@ -488,7 +489,7 @@ class Test extends prime.gui.display.Sprite {
 
 	<section id="layout-example-layoutclient">
 		<h2>Example LayoutClient</h2>
-		<textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code">
+		<pre><!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code">--><code>
 import prime.layout.LayoutClient;
 import prime.gui.display.Sprite;
 import prime.core.geom.Box;
@@ -516,7 +517,7 @@ class Test {
 		g.drawRect(l.left, l.top, l.width, l.height);
 		g.endFill();
 	}
-}</textarea></section>
+}</code></pre><!-- </textarea> --></section>
 
 	<section id="layoutcontainer">
 		<h2>LayoutContainer</h2>
@@ -536,7 +537,7 @@ class Test {
 
 	<section id="layout-example-algorithms">
 		<h2>Example Algorithms</h2>
-		<textarea name="hx-source" class="code haxe-source" rows="10" id="layout-algorithms-demo">
+		<pre><!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="layout-algorithms-demo">--><code>
 import Prime;
  using prime.utils.Bind;
  using Std;
@@ -567,7 +568,7 @@ class Test extends prime.gui.core.UIWindow
 		new DynamicLayout(
 			function () return new HorizontalCircle(),
 			function () return new VerticalFloat())];
-}</textarea></section>
+}</code></pre><!-- </textarea> --></section>
 	</section>
 </section>
 
@@ -681,7 +682,7 @@ Test UIComponent:hover {
 
 	<section id="display-core-demo">
 		<h2>Basic CSS</h2>
-		<textarea name="hx-source" class="code haxe-source" rows="10" id="display-core-demo">
+		<pre><!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="display-core-demo">--><code>
 import Prime;
 class Test extends prime.gui.core.UIWindow
 {
@@ -695,7 +696,7 @@ class Test extends prime.gui.core.UIWindow
 		for (i in 0...20)	attach( new UIGraphic() );
 	}
 }
-</textarea></section>
+</code></pre><!-- </textarea> --></section>
 </section>
 
 
