@@ -151,3 +151,8 @@ Reveal.initialize({
     { src: 'components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
   ]
 });
+
+Reveal.addEventListener( 'slidechanged', function (event) {
+  mixpanel.track('open '+event.currentSlide.id);
+});
+
