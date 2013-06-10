@@ -1,4 +1,4 @@
---dead-code-elimination
+-dce full
 -cp components/try-haxe/src
 -cp components/try-haxe/lib/haxe-bootstrap
 -D noEmbedBootstrap
