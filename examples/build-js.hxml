@@ -1,4 +1,4 @@
-build-prime.hxml
+../../../examples/build-prime.hxml
 -D html5
 -D html
 -D web
