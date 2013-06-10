@@ -1,41 +1,41 @@
-.CodeMirror pre  {
+#presentation .CodeMirror pre  {
 	box-shadow: none;
 	font-size: 48%; /*53%;*/
 	line-height: 1.6;
 	font-family: monospace;
 }
-.CodeMirror-scroll {
+#presentation .CodeMirror-scroll {
 	max-height: 100%;
 	height: auto;
 }
-.demo > .CodeMirror-wrap {
+#presentation .demo > .CodeMirror-wrap {
 	width: 55%;
 	float: left;
 	clear: left;
 }
-.reveal .control-group {
+#presentation .reveal .control-group {
 	width: 50%;
 	float: left;
 	margin-bottom: .3em;
 }
-.control-group input {
+#presentation .control-group input {
 	margin-left: .5em;
 }
-.control-group label {
+#presentation .control-group label {
 	font-size: 50%;
 	line-height: 1.4;
 	position: relative;
 	top: .1em;
 	margin-left: .2em;
 }
-.nav li {
+#presentation .nav li {
 	list-style: none;
 }
 .control-label,
 .reveal .controls {
 	float: right;
 }
-.reveal .target-controls {
+#presentation .reveal .target-controls {
 	float: right;
 	line-height: 0;
 	margin-top: .2em;
@@ -45,18 +45,18 @@
 	margin-left: 2em;
 	border-radius: 1em;
 }
-.compiler-out .nav-tabs li a,
-.reveal a.btn {
+#presentation .compiler-out .nav-tabs li a,
+#presentation .reveal a.btn {
 	font-size: 60%;
 	padding: .4em 1em;
 	line-height: 1;
 	background: #111;
 	color: #fff;
 }
-.reveal .compiler-out {
+.reveal .compiler-out, .messages {
 	position: relative;
-	width: 45%;
-	float: left;
+	width: 44%;
+	float: right;
 	margin-left: 1em;
 	margin-right: -1em;
 }
@@ -80,30 +80,31 @@
 }
 .tab-pane                  { display: none; }
 .tab-pane.active           { display: block; }
-.reveal .messages          { font-size: 70%; }
+#presentation .reveal .messages { font-size: 70%; }
 .reveal .js-canvas         { padding: 1em .5em 0; }
 .reveal iframe             { width: 100%; background: #fff; height: 40%; }
 .compiler-out              { display: none; }
 .reveal .CodeMirror-scroll { padding: .1em .4em; max-height: 17em; overflow: scroll; }
-.reveal .messages pre {
+#presentation .reveal .messages pre {
 	margin: 0;
-	padding: 1em;
+	padding: .15em 1em;
 	background: #272822;
 	box-shadow: none;
 	font-size: 50%;
+	width: auto;
 }
-.messages i.msg {
+#presentation .messages i.msg {
 	position: absolute;
 	left: -.3em;
 	top: -1.5em;
 	font-size: 125%;
 }
-.messages i.icon-check  { color: #A6E22E; }
-.messages i.icon-cancel { color: #F92672; }
+#presentation .messages i.icon-check  { color: #A6E22E; }
+#presentation .messages i.icon-cancel { color: #F92672; }
 
 .reveal.cube .slides section:not(.stack):before { background: none; }
 .reveal.cube .slides section:not(.stack):after { box-shadow: none; }
-.reveal section img {
+#presentation .reveal section img {
 	margin: 0;
 	background: none;
 	border: none;
@@ -133,7 +134,7 @@
 	text-align: right;
 	font-size: 70%;
 }
-.reveal .messages pre.args {
+#presentation .reveal .messages pre.args {
 	font-size: 45%;
 }
 #about-us ol span.note {
@@ -246,7 +247,7 @@ i.icon-emo-shoot {
 	min-width: 5.7em;
 	font-size: 70%;
 }
-i.prime {
+#presentation i.prime {
 	background: #3a251a;
 	border-radius: 50%;
 	padding: .3em .2em;
@@ -264,25 +265,25 @@ i.prime {
 #overview-css        { left: 27%; top: 18%; }
 
 
-ul.dependencies {
+#presentation ul.dependencies {
 	list-style: none;
 }
-ul.dependencies li {
+#presentation ul.dependencies li {
 	float: left;
 	margin-bottom: .3em;
 }
-ul.dependencies li i.prime {
+#presentation ul.dependencies li i.prime {
 	font-size: 100%;
 	border-width: 4px;
 }
-ul.dependencies li:not(:last-child):after {
+#presentation ul.dependencies li:not(:last-child):after {
 	content: "+";
 	font-size: 1.3em;
 	font-weight: bold;
 	margin: 0 .4em;
 }
 
-i.lib.prime {
+#presentation i.lib.prime {
 	position: absolute;
 	top: .3em;
 	left: 2em;
@@ -300,26 +301,26 @@ i.lib.prime {
 #svg-mvc-view     { top: 0%; left: 0%; }
 
 /*#layoutclients img.fragment { position: relative; }*/
-#layout-actors2 { margin-left: -17%; }
+#presentation #layout-actors2 { margin-left: -17%; }
 
-#team ul {
+#presentation #team ul {
 	margin: 0;
 	list-style: none;
 }
-#team li { float: left; }
-#team img {
+#presentation #team li { float: left; }
+#presentation #team img {
 	width: 5em;
 	border-radius: 50%;
 	border: 7px solid #eee;
 	margin: 0 1em .5em;
 }
-#team h3 {
+#presentation #team h3 {
 	font-size: 100%;
 	text-align: center;
 }
 
-.dl-horizontal:before,
-.dl-horizontal:after {
+#presentation .dl-horizontal:before,
+#presentation .dl-horizontal:after {
   display: table;
   line-height: 0;
   content: "";
@@ -329,7 +330,7 @@ i.lib.prime {
   clear: both;
 }
 
-.dl-horizontal dt {
+#presentation .dl-horizontal dt {
   float: left;
   width: 27%;
   overflow: hidden;

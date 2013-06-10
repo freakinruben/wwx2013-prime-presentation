@@ -13,28 +13,13 @@
 	<link rel="stylesheet" href="components/reveal.js/css/reveal.min.css">
 	<link rel="stylesheet" href="components/reveal.js/css/theme/default.css" id="theme">
 	<link rel="stylesheet" href="components/reveal.js/lib/css/zenburn.css">
-	
-	<!-- <link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/lib/codemirror.css"/>
-	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/lib/util/simple-hint.css"/> -->
-	<!-- <link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/ambiance.css"/>
-	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/blackboard.css"/>
-	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/cobalt.css"/>
-	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/elegant.css"/>
-	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/erlang-dark.css"/>
-	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/lesser-dark.css"/> -->
-	<!-- <link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/monokai.css"/> -->
-	<!-- <link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/neat.css"/>
-	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/night.css"/>
-	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/rubyblue.css"/>
-	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/vibrant-ink.css"/>
-	<link rel="stylesheet" href="components/try-haxe/lib/CodeMirror2/theme/xq-dark.css"/> -->
 	<link rel="stylesheet" href="css/icons.css">
 	<link rel="stylesheet" href="css/screen.css">
 <!--[if lt IE 9]>
 	<script src="components/reveal.js/lib/js/html5shiv.js"></script>
 <![endif]-->
 </head>
-<body data-api="components/try-haxe/app">
+<body data-api="components/try-haxe/app" id="presentation">
 <div class="reveal">
 <div class="slides">
 <section id="title">
@@ -176,7 +161,7 @@ signal.bind( this, actOnSignal );                   // binding them together</co
 
 	<section id="signals-example1">
 		<h2>Binding, observing</h2>
-		<!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example1-code"> --><pre><code>
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example1-code" data-haxe-js="../../examples/build-js.hxml" data-haxe-swf="../../examples/build-swf.hxml">
 import prime.signals.Signal2;
 
 class Test {
@@ -187,13 +172,12 @@ class Test {
 		s.observe(this, function () { trace("test"); });
 		s.send(5, "test");
 	}
-}</code></pre></code></pre><!-- </textarea> -->
-</section>
+}</textarea></form></section>
 
 
 	<section id="signals-example2">
 		<h2>Syntax sugar</h2>
-		<!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example2-code">--><pre><code>
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example2-code">
 import prime.signals.Signal1;
  using prime.utils.Bind;
 class Test {
@@ -207,7 +191,7 @@ class Test {
 		s.send("argument1");
 		s.send("argument2");
 	}
-}</code></pre><!-- </textarea> --></section>
+}</textarea></form></section>
 
 </section>
 
@@ -228,7 +212,7 @@ class Test {
 
 	<section id="bindable-example-simple1">
 		<h2>Bindable Object</h2>
-		<!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example1-code">--><pre><code>
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example1-code">
 import prime.bindable.Bindable;
  using prime.utils.Bind;
 class Test {
@@ -241,13 +225,13 @@ class Test {
 		trace(a.value);
 		a.value = "Enjoy WWX '13";
 	}
-}</code></pre><!-- </textarea> -->
+}</textarea></form>
 	</section>
 
 
 	<section id="bindable-example-simple2">
 		<h2>Binding Objects</h2>
-		<!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example2-code">--><pre><code>
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example2-code">
 import prime.bindable.Bindable;
 class Test {
 	static function main () new Test()
@@ -268,13 +252,13 @@ class Test {
 		trace("A: "+a.value);
 		trace("B: "+b.value);
 	}
-}</code></pre><!-- </textarea> -->
+}</textarea></form>
 	</section>
 
 
 	<section id="bindable-example-pairing">
 		<h2>Pairing Objects</h2>
-		<!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example3-code">--><pre><code>
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example3-code">
 import prime.bindable.Bindable;
 class Test {
 	static function main () new Test()
@@ -295,13 +279,13 @@ class Test {
 		trace("A: "+a.value);
 		trace("B: "+b.value);
 	}
-}</code></pre><!-- </textarea> -->
+}</textarea></form>
 	</section>
 
 
 	<section id="bindable-example-arraylist">
 		<h2>ArrayList</h2>
-		<!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example4-code">--><pre><code>
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example4-code">
 import prime.bindable.collections.ArrayList;
  using prime.utils.Bind;
 class Test {
@@ -315,13 +299,13 @@ class Test {
 		trace(l);
 		l.remove(a);
 	}
-}</code></pre><!-- </textarea> -->
+}</textarea></form>
 	</section>
 
 
 	<section id="bindable-example-arraylist2">
 		<h2>Binding ArrayList</h2>
-		<!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code">--><pre><code>
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code">
 import prime.bindable.collections.ArrayList;
 class Test {
 	static function main () new Test()
@@ -339,7 +323,7 @@ class Test {
 		trace("l2: "+l2);
 		l1.remove(a);
 	}
-}</code></pre><!-- </textarea> -->
+}</textarea></form>
 	</section>
 
 
@@ -421,7 +405,7 @@ class SelectionController extends MVCActor&lt;Facade&gt; {}</code></pre>
 
 	<section id="display-example1">
 		<h2>Adding children</h2>
-<!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="display-example1-code">--><pre><code>
+<form><textarea name="hx-source" class="code haxe-source" rows="10" id="display-example1-code">
 import prime.gui.events.MouseEvents;
  using prime.utils.Bind;
 
@@ -453,7 +437,7 @@ class Test extends prime.gui.display.Sprite {
 		graphics.beginFill(color);
 		graphics.drawRect(0,0,75,75);
 	}
-}</code></pre><!-- </textarea> --></section>
+}</textarea></form></section>
 </section>
 
 
@@ -489,7 +473,7 @@ class Test extends prime.gui.display.Sprite {
 
 	<section id="layout-example-layoutclient">
 		<h2>Example LayoutClient</h2>
-		<!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code">--><pre><code>
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code">
 import prime.layout.LayoutClient;
 import prime.gui.display.Sprite;
 import prime.core.geom.Box;
@@ -517,7 +501,7 @@ class Test {
 		g.drawRect(l.left, l.top, l.width, l.height);
 		g.endFill();
 	}
-}</code></pre><!-- </textarea> --></section>
+}</textarea></form></section>
 
 	<section id="layoutcontainer">
 		<h2>LayoutContainer</h2>
@@ -537,7 +521,7 @@ class Test {
 
 	<section id="layout-example-algorithms">
 		<h2>Example Algorithms</h2>
-		<!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="layout-algorithms-demo">--><pre><code>
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="layout-algorithms-demo">
 import Prime;
  using prime.utils.Bind;
  using Std;
@@ -568,7 +552,7 @@ class Test extends prime.gui.core.UIWindow
 		new DynamicLayout(
 			function () return new HorizontalCircle(),
 			function () return new VerticalFloat())];
-}</code></pre><!-- </textarea> --></section>
+}</textarea></form></section>
 	</section>
 </section>
 
@@ -682,7 +666,7 @@ Test UIComponent:hover {
 
 	<section id="display-core-demo">
 		<h2>Basic CSS</h2>
-		<!-- <textarea name="hx-source" class="code haxe-source" rows="10" id="display-core-demo">--><pre><code>
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="display-core-demo">
 import Prime;
 class Test extends prime.gui.core.UIWindow
 {
@@ -696,7 +680,7 @@ class Test extends prime.gui.core.UIWindow
 		for (i in 0...20)	attach( new UIGraphic() );
 	}
 }
-</code></pre><!-- </textarea> --></section>
+</textarea></form></section>
 </section>
 
 
@@ -772,11 +756,7 @@ MenuBar Button {
 <script src="components/reveal.js/lib/js/head.min.js"></script>
 <script src="components/reveal.js/js/reveal.js"></script>
 <script src="components/reveal.js/js/jquery.min.js"></script>
-<!-- <script src="components/try-haxe/lib/CodeMirror2/lib/codemirror.js"></script>
-<script src="components/try-haxe/lib/CodeMirror2/mode/haxe/haxe.js"></script>
-<script src="components/try-haxe/lib/CodeMirror2/mode/javascript/javascript.js"></script>
-<script src="components/try-haxe/lib/haxe-hint.js"></script>
-<script src="components/try-haxe/app.js"></script> -->
+<script src="app.js"></script>
 <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
 typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
 b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);

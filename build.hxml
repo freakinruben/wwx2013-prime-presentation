@@ -1,0 +1,8 @@
+--dead-code-elimination
+-cp components/try-haxe/src
+-cp components/try-haxe/lib/haxe-bootstrap
+-D noEmbedBootstrap
+-D noEmbedJS
+-cp src
+-js app.js
+-main prime.wwx2013.PrimeEditor

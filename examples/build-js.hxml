@@ -1,0 +1,7 @@
+build-prime.hxml
+-D html5
+-D html
+-D web
+--remap flash:nme
+--remap native:browser
+-cp /usr/lib/haxe/lib/nme/3,5,5
