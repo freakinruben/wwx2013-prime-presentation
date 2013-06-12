@@ -128,7 +128,6 @@ class PrimeEditor
     {
         var o = editor.output;
         var jsSourceElem = new JQuery(editor.jsSource.getWrapperElement());
-        var msg : Array<String> = [];
         var msgType : String = "";
 
         outDisplay.show();
@@ -143,15 +142,12 @@ class PrimeEditor
 
             haxeOutput.attr("src", o.href + "?r=" + Math.random().string());
         } else {
-            msg = o.stderr.split("\n");
             haxeOutput.hide();
             jsTab.hide();
             jsSourceElem.hide();
             haxeOutput.attr("src", "about:blank");
         }
         messages.html("<i class='msg icon-" + (o.success ? "check" : "cancel") + "'></i><div class='message'></div>");
-        for (m in msg)
-            messages.find(".message").append(new JQuery("<pre>").text(m));
         
         if (o.stderr != null) {
             messages.append( new JQuery("<pre>").text(o.stderr) );
@@ -181,14 +177,14 @@ class PrimeEditor
     </div>')
             .after('<div class="compiler-out">
         <ul class="nav nav-tabs">
-            <li class="active"><a href="#js-output" data-toggle="tab">Output</a></li>
+            <li class="active"><a href=".js-output" data-toggle="tab">Output</a></li>
             <li><a href=".js-source" data-toggle="tab">JS Source</a></li>
         </ul>
         <div class="tab-content">
-            <div class="tab-pane js-output active thumbnail"><iframe class="js-run" src="about:blank" name="js-run" frameborder="no" scrolling="no"></iframe></div>
+            <div class="tab-pane js-output active"><iframe class="js-run" src="about:blank" name="js-run" frameborder="no" scrolling="no"></iframe></div>
             <div class="tab-pane js-source"><textarea name="js-source" class="code js-source"></textarea></div>
+            <div class="messages"></div>
         </div>
-    </div>
-    <div class="messages"></div>');
+    </div>');
     }
 }

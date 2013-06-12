@@ -45,20 +45,22 @@
 	margin-left: 2em;
 	border-radius: 1em;
 }
-#presentation .compiler-out .nav-tabs li a,
-#presentation .reveal a.btn {
+.compiler-out .nav-tabs li a,
+.reveal a.btn {
 	font-size: 60%;
 	padding: .4em 1em;
 	line-height: 1;
 	background: #111;
 	color: #fff;
 }
-.reveal .compiler-out, .messages {
+.reveal .compiler-out {
 	position: relative;
-	width: 44%;
-	float: right;
 	margin-left: 1em;
-	margin-right: -1em;
+	background: #272822;
+	width: 42%;
+}
+.reveal .compiler-out, .messages {
+	float: left;
 }
 .compiler-out .nav-tabs {
 	width: 100%;
@@ -74,24 +76,22 @@
 .compiler-out .nav-tabs li a {
 	border-radius: 1em 1em 0 0;
 }
-.compiler-out .nav-tabs li.active a,
-.tab-content {
+.compiler-out .nav-tabs li.active a {
 	background: #272822;
 }
 .tab-pane                  { display: none; }
 .tab-pane.active           { display: block; }
-#presentation .reveal .messages { font-size: 70%; }
-.reveal .js-canvas         { padding: 1em .5em 0; }
-.reveal iframe             { width: 100%; background: #fff; height: 40%; }
+#presentation .reveal .messages { font-size: 70%; width: 100%; }
+.reveal .js-output,
+    .reveal .messages      { padding: .5em; }
+.reveal iframe             { width: 100%; background: #fff; height: 40%; max-width: none; }
 .compiler-out              { display: none; }
 .reveal .CodeMirror-scroll { padding: .1em .4em; max-height: 17em; overflow: scroll; }
 #presentation .reveal .messages pre {
 	margin: 0;
-	padding: .15em 1em;
-	background: #272822;
 	box-shadow: none;
-	font-size: 50%;
-	width: auto;
+	font-size: 46%;
+	float: left;
 }
 #presentation .messages i.msg {
 	position: absolute;
