@@ -1,0 +1,12 @@
+DirectorySlash Off
+Options -Indexes
+
+RewriteEngine on
+
+# RewriteCond %{HTTP_HOST} localhost
+RewriteCond %{REQUEST_URI} !index.php
+RewriteCond %{REQUEST_URI} ^/~([^/]*)/
+RewriteRule ^app/(.*)$ /~%1/wwx2013/app/index.php?_url=$1 [L,QSA]
+
+RewriteCond %{REQUEST_URI} !index.php
+RewriteRule ^app/(.*)$ http://%{HTTP_HOST}%{REQUEST_URI}/index.php?_url=$1 [L,QSA]

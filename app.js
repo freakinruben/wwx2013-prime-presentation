@@ -1400,13 +1400,14 @@ tryhaxe.Editor.prototype = {
 		if(src.length > 1000) this.program.main.source = src.substring(0,idx);
 		this.cnx.resolve("Compiler").resolve("autocomplete").call([this.program,idx],$bind(this,this.displayCompletions));
 	}
-	,onProgramLoaded: function(p) {
-		if(p != null) {
-			this.program = p;
-			p.uid = null;
+	,onProgramLoaded: function(c) {
+		if(c != null) {
+			this.program = c.program;
+			this.output = c.out;
 			if(this.initialized) {
-				this.haxeDoc.setValue(p.main.source);
+				this.haxeDoc.setValue(this.program.main.source);
 				if(this.handleLoaded != null) this.handleLoaded();
+				if(c.out != null) this.onCompiled(c.out);
 			}
 		}
 	}
@@ -1436,7 +1437,7 @@ tryhaxe.Editor.prototype = {
 		}(this));
 	}
 	,startNewProgram: function() {
-		if(this.initialized) this.onProgramLoaded({ uid : null, main : { name : this.options.className, source : this.haxeDoc.getValue()}, target : this.toTarget(this.options.defaultTarget), options : this.options.defaultTarget == 2?this.options.defaultJsArgs:this.options.defaultSwfArgs});
+		if(this.initialized) this.onProgramLoaded({ out : null, program : { uid : null, main : { name : this.options.className, source : this.haxeDoc.getValue()}, target : this.toTarget(this.options.defaultTarget), options : this.options.defaultTarget == 2?this.options.defaultJsArgs:this.options.defaultSwfArgs}});
 	}
 	,init: function() {
 		this.markers = [];
@@ -1447,7 +1448,7 @@ tryhaxe.Editor.prototype = {
 		tryhaxe.Editor.editorMap.set(this.haxeSource,this);
 		if(this.options.jsOutput != null) this.jsSource = CodeMirror.fromTextArea(new js.JQuery("#" + this.options.id + " textarea[name='js-source']")[0],this.options.jsOutput);
 		this.initialized = true;
-		if(this.program != null) this.onProgramLoaded(this.program); else this.startNewProgram();
+		if(this.program != null) this.onProgramLoaded({ out : this.output, program : this.program}); else this.startNewProgram();
 	}
 	,__class__: tryhaxe.Editor
 }

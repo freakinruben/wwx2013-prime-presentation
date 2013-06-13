@@ -1,8 +1,16 @@
--dce full
 -cp components/try-haxe/src
 -cp components/try-haxe/lib/haxe-bootstrap
+-cp src
+-dce full
+-main prime.wwx2013.PrimeEditor
+-php app
+
+--next
+-cp components/try-haxe/src
+-cp components/try-haxe/lib/haxe-bootstrap
+-cp src
+-dce full
+-main prime.wwx2013.PrimeEditor
 -D noEmbedBootstrap
 -D noEmbedJS
--cp src
 -js app.js
--main prime.wwx2013.PrimeEditor

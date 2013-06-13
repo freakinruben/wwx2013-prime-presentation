@@ -19,7 +19,7 @@
 	<script src="components/reveal.js/lib/js/html5shiv.js"></script>
 <![endif]-->
 </head>
-<body data-api="components/try-haxe/app" id="presentation">
+<body data-api="app" id="presentation">
 <div class="reveal">
 <div class="slides">
 <section id="title">
@@ -161,11 +161,11 @@ signal.bind( this, actOnSignal );                   // binding them together</co
 
 	<section id="signals-example1">
 		<h2>Binding, observing</h2>
-		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example1-code" data-haxe-js="../../../examples/build-js.hxml" data-haxe-swf="../../../examples/build-swf.hxml">
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example1-code" data-haxe-js="../examples/build-js.hxml" data-haxe-swf="../examples/build-swf.hxml">
 import prime.signals.Signal2;
 
 class Test {
-	static function main() new Test()
+	static function main() new Test();
 	function new () {
 		var s = new Signal2&lt;Int,String&gt;();
 		s.bind(this, function (a,b) trace("a: "+a+"; b: "+b));
@@ -177,11 +177,11 @@ class Test {
 
 	<section id="signals-example2">
 		<h2>Syntax sugar</h2>
-		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example2-code" data-haxe-js="../../../examples/build-js.hxml" data-haxe-swf="../../../examples/build-swf.hxml">
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="signals-example2-code" data-haxe-js="../examples/build-js.hxml" data-haxe-swf="../examples/build-swf.hxml">
 import prime.signals.Signal1;
  using prime.utils.Bind;
 class Test {
-	static function main() new Test()
+	static function main() new Test();
 	function new () {
 		var s = new Signal1&lt;String&gt;();
 		function () { trace("test"); }.on(s,this);
@@ -212,11 +212,11 @@ class Test {
 
 	<section id="bindable-example-simple1">
 		<h2>Bindable Object</h2>
-		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example1-code" data-haxe-js="../../../examples/build-js.hxml" data-haxe-swf="../../../examples/build-swf.hxml">
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example1-code" data-haxe-js="../examples/build-js.hxml" data-haxe-swf="../examples/build-swf.hxml">
 import prime.bindable.Bindable;
  using prime.utils.Bind;
 class Test {
-	static function main () new Test()
+	static function main () new Test();
 	function new () {
 		var a = new Bindable&lt;String&gt;("WWX '13");
 		function (newV, oldV) {
@@ -231,10 +231,10 @@ class Test {
 
 	<section id="bindable-example-simple2">
 		<h2>Binding Objects</h2>
-		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example2-code" data-haxe-js="../../../examples/build-js.hxml" data-haxe-swf="../../../examples/build-swf.hxml">
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example2-code" data-haxe-js="../examples/build-js.hxml" data-haxe-swf="../examples/build-swf.hxml">
 import prime.bindable.Bindable;
 class Test {
-	static function main () new Test()
+	static function main () new Test();
 	function new () {
 		var a = new Bindable&lt;String&gt;("Value A");
 		var b = new Bindable&lt;String&gt;("Value B");
@@ -258,10 +258,10 @@ class Test {
 
 	<section id="bindable-example-pairing">
 		<h2>Pairing Objects</h2>
-		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example3-code" data-haxe-js="../../../examples/build-js.hxml" data-haxe-swf="../../../examples/build-swf.hxml">
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example3-code" data-haxe-js="../examples/build-js.hxml" data-haxe-swf="../examples/build-swf.hxml">
 import prime.bindable.Bindable;
 class Test {
-	static function main () new Test()
+	static function main () new Test();
 	function new () {
 		var a = new Bindable&lt;String&gt;("Value A");
 		var b = new Bindable&lt;String&gt;("Value B");
@@ -285,11 +285,11 @@ class Test {
 
 	<section id="bindable-example-arraylist">
 		<h2>ArrayList</h2>
-		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example4-code" data-haxe-js="../../../examples/build-js.hxml" data-haxe-swf="../../../examples/build-swf.hxml">
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example4-code" data-haxe-js="../examples/build-js.hxml" data-haxe-swf="../examples/build-swf.hxml">
 import prime.bindable.collections.ArrayList;
  using prime.utils.Bind;
 class Test {
-	static function main () new Test()
+	static function main () new Test();
 	function new () {
 		var a = "value 1"; var b = "value2";
 		var l = new ArrayList&lt;String&gt;();
@@ -305,10 +305,10 @@ class Test {
 
 	<section id="bindable-example-arraylist2">
 		<h2>Binding ArrayList</h2>
-		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code" data-haxe-js="../../../examples/build-js.hxml" data-haxe-swf="../../../examples/build-swf.hxml">
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code" data-haxe-js="../examples/build-js.hxml" data-haxe-swf="../examples/build-swf.hxml">
 import prime.bindable.collections.ArrayList;
 class Test {
-	static function main () new Test()
+	static function main () new Test();
 	function new () {
 		var a = "val1"; var b = "val2"; var c = "val3";
 		var l1 = new ArrayList&lt;String&gt;();
@@ -405,7 +405,7 @@ class SelectionController extends MVCActor&lt;Facade&gt; {}</code></pre>
 
 	<section id="display-example1">
 		<h2>Adding children</h2>
-<form><textarea name="hx-source" class="code haxe-source" rows="10" id="display-example1-code" data-haxe-js="../../../examples/build-js.hxml" data-haxe-swf="../../../examples/build-swf.hxml">
+<form><textarea name="hx-source" class="code haxe-source" rows="10" id="display-example1-code" data-haxe-js="../examples/build-js.hxml" data-haxe-swf="../examples/build-swf.hxml">
 import prime.gui.events.MouseEvents;
  using prime.utils.Bind;
 
@@ -473,7 +473,7 @@ class Test extends prime.gui.display.Sprite {
 
 	<section id="layout-example-layoutclient">
 		<h2>Example LayoutClient</h2>
-		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code" data-haxe-js="../../../examples/build-js.hxml" data-haxe-swf="../../../examples/build-swf.hxml">
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="bindable-example5-code" data-haxe-js="../examples/build-js.hxml" data-haxe-swf="../examples/build-swf.hxml">
 import prime.layout.LayoutClient;
 import prime.gui.display.Sprite;
 import prime.core.geom.Box;
@@ -521,7 +521,7 @@ class Test {
 
 	<section id="layout-example-algorithms">
 		<h2>Example Algorithms</h2>
-		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="layout-algorithms-demo" data-haxe-js="../../../examples/build-js.hxml" data-haxe-swf="../../../examples/build-swf.hxml">
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="layout-algorithms-demo" data-haxe-js="../examples/build-js.hxml" data-haxe-swf="../examples/build-swf.hxml">
 import Prime;
  using prime.utils.Bind;
  using Std;
@@ -666,7 +666,7 @@ Test UIComponent:hover {
 
 	<section id="display-core-demo">
 		<h2>Basic CSS</h2>
-		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="display-core-demo" data-haxe-js="../../../examples/build-js.hxml" data-haxe-swf="../../../examples/build-swf.hxml">
+		<form><textarea name="hx-source" class="code haxe-source" rows="10" id="display-core-demo" data-haxe-js="../examples/build-js.hxml" data-haxe-swf="../examples/build-swf.hxml">
 import Prime;
 class Test extends prime.gui.core.UIWindow
 {

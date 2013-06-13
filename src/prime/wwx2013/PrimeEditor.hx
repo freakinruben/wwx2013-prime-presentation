@@ -1,18 +1,17 @@
 package prime.wwx2013;
+#if js
  import js.JQuery;
  import tryhaxe.Editor;
   using js.bootstrap.Button;
   using Std;
-
+#end
 
 class PrimeEditor
 {
-#if haxe3   private static var editors : Map<String,PrimeEditor> = new Map();
-#else       private static var editors : Hash<PrimeEditor> = new Hash(); #end
-
-    public static function main () {
-        js.reveal.Reveal.addEventListener('slidechanged', loadEditor);
-    }
+#if php
+    public static function main () { tryhaxe.Api.start(); }
+#else
+    public static function main () { js.reveal.Reveal.addEventListener('slidechanged', loadEditor); }
 
     private static function loadEditor (e:js.reveal.Reveal.RevealEvent) {
         var slide = new js.JQuery(e.currentSlide);
@@ -22,6 +21,8 @@ class PrimeEditor
                 editors.set(code.prop("id"), new PrimeEditor(code));
     }
 
+#if haxe3   private static var editors : Map<String,PrimeEditor> = new Map();
+#else       private static var editors : Hash<PrimeEditor> = new Hash(); #end
 
     var editor     : Editor;
     var id         : String;
@@ -187,4 +188,5 @@ class PrimeEditor
         </div>
     </div>');
     }
+#end
 }
